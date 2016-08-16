@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	.con { width: 500px; height: 40px; line-height: 40px; border:1px solid #ccc; margin: 100px auto; text-align:center; }
+	figure { width: 350px; height: 196px; margin: 100px auto; display: none; }
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var timer01 = null;
+		var num = 0;
+		timer01 = setInterval(function(){
+			//每间隔30毫秒 就要num++ 直到100为止
+			num++;
+			//如果num的值大于100了 我们要停止定时器 并且让con隐藏 让img出现
+			if(num > 100){
+				clearInterval(timer01);
+				timer01 = null;
+				$('.con').hide();
+				$('figure').show();
+			}
+			$('progress').val(num);
+			$('.con span').html(num);
+		},30);	
+	})
+</script>
+</head>
+
+<body>
+	<div class="con">
+    	loading... <progress value="0" max="100"></progress><span>0</span>%
+    </div>
+    <figure><img src="img/110.gif" width="350" height="196"></figure>
+	
+</body>
+</html>

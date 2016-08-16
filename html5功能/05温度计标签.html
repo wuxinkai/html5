@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var num = 0;
+		$('button').eq(0).click(function(e) {
+			num++;
+			if(num > 10){
+				num = 10;
+			}else if(num > 7){
+				$('img').attr('src','img/01.gif');
+			}
+            $('meter').val(num);
+        });
+		$('button').eq(1).click(function(e) {
+			num--;
+		    if(num < 0){
+				num = 0;
+			}else if(num < 7){
+				$('img').attr('src','img/praise.gif');
+			}
+            $('meter').val(num);
+        });
+	})
+</script>
+</head>
+
+<body>
+	<img src="img/praise.gif" width="625" height="522"><br>
+	<meter max="10" min="0" low="3" high="7" value="0"></meter><button>顶</button><button>踩</button>
+</body>
+</html>

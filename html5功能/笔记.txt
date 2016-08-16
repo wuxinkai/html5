@@ -1,0 +1,198 @@
+【1.五大浏览器厂商】
+谷歌
+火狐
+欧朋
+苹果
+ie
+注意：五大浏览器厂商只有四个内核（内核：心脏、cpu） 谷歌和苹果用的是同一个内核
+
+【2.html5的头部文件】
+<!doctype html>
+<meta  charset="utf-8" />
+
+这些就是html5的标准头部文件（希望大家能背下来）
+今后写代码只要写html的头部文件即可，因为它是向下兼容的
+
+【3.检测浏览器对html5的兼容性】
+如果写一个<canvas>文字</canvas>标签，它只会被高级的浏览器解析出来，而低版本的浏览器会把这个标签中间的文字显示出来，我们可以利用这一特性，来检测浏览器对html5标签的支持度;
+canvas是一个叫画布的标签
+
+【4.html5标签的语义化】
+在html5中，新增加了很多语义化的标签，语义化的好处是，有利于搜索引擎蜘蛛去找你的页面，语义化越好，“蜘蛛”越喜欢，那么你的网站排名就越靠前
+注意：”蜘蛛“只认识html标签，它不认识js和css。
+
+【5.html5的新标签】
+header  代表的是头部标签
+nav       代表导航栏标签
+aside    代表侧边栏标签
+article  代表文章标签
+section 代表块标签（div的区别：它比div的语义化要大）
+footer   代表的是底部标签2
+figure    媒体内容标签（这个标签内是一些媒体内容（视频、图片、音频））
+figcaption  代表的是媒体标签的头部标题
+hgroup  代表的给标题标签打组（统一管理h标签），它的结构像ul>li
+
+【6.快捷键】
+ctrl+shift+左或右 可以选中单词
+
+【7.视频标签】
+在html5中如果想播放一段视频，只要用video标签，再设置它的src地址即可
+支持的格式有：
+1.webm 这个是w3c组织推荐的格式
+2.mp4
+3.ogg
+为了浏览器的兼容性：我们一般使用video和source标签的组合来实现兼容性问题的；
+例： 
+<video>
+	<source src="1.webm"></source>
+	<source src="1.mp4"></source>
+	<source src="1.ogg"></source>
+</video>
+注意：浏览器只要能够解析它认识的第一个source中的视频地址，它就不会再往下执行其它的了
+
+视频标签的标签属性：
+1.autoplay     控制视频可以自动播放
+2.controls      显示控制条
+3.loop             让视频循环播放
+4.preload       边播放边加载
+注意：这些标签属性都要用“键值对”的形式去写，这些属性都加在video的开始标签中
+
+【8.控制html5的video】
+因为我们的html5是官方出品的技术，所以它的一些方法和属性都是根据官方的js代码去定的，所以，如果我们用jq的选择器去获取页面元素的话，一定要转成dom对象，才能执行html5的一系列方法和属性
+
+【9.控制宽高】
+我们的video标签是可以设置宽和高的，但是，它里面的视频已经规定好了宽高比，所以我们在控制宽高的时候，只写一个宽或高即可设置大小;
+
+【10.控制视频播放、暂停】
+play()       播放的方法
+pause()    暂停的方法
+
+
+
+【1.按钮失效】
+如果想让按钮失效的话，只要给它加一个标签属性disabled即可，如果想用js去控制，那么就要设置它的值为true，才能实现失效的效果，而设置为false，就可以再
+次启用
+例：attr('disabled',true)     js控制按钮失效
+
+【2.audio音频标签】
+它的控制方法和video标签完全一样；
+注意：如果想设置背景音乐，只要加上loop和autoplay两个标签属性即可实现
+
+【3.js的事件冒泡】
+js的事件冒泡：给大盒子添加的事件，会被多次执行，这时候就要想到是不是使用了会触发js事件冒泡的一些方法----mouseover、mouseout
+解决办法:
+1.使用mouseenter和mouseleave 这两个方法去写鼠标的移入移出，就不会触发事件冒泡了
+2.可以使用hover方法，它也可以解决此问题
+注意：由此可见，hover方法就是mouseenter、和mouseleave的结合体
+
+【4.键盘事件】
+$(window).keydown(function(e){
+	这是一个键盘被按下时候 产生的事件 这里的“e”里面存着，被按下键盘的编号，我们可以利用这个编号来确认用户按下的按钮; 获取用户按下按钮的编码：e.keyCode
+}) 
+
+【5.温度计标签】
+meter  它可以设置一些列的标签属性值 max--最大值    min--最小值   low--较低值
+high--较高值   value--当前值
+
+【6.进度条标签】
+progress  可以设置value、max这两个标签属性
+它可以在页面上绘制出一个进度条
+
+【7.数据列表标签】
+它是和input合作使用的，
+例：
+<input type="text" list="myData" />
+<datalist id="myData">
+<option>数据项1</option><option>数据项2</option>
+</datalist>
+注意：他们之间的是通过id值等于list值，来实现对接的；
+
+【8.html5新标签的使用场景】
+因为html5标签的支持情况不同，所以我们在使用的时候，要多加小心
+不能使用的情况：如果写的一个标签，会造成低版本浏览器页面错乱
+能使用的情况：低版本浏览器不会造成页面混乱
+
+【9.input的可选属性】
+type="email"       在火狐中可以实现检测的功能
+type="date"          可以实现显示日期插件的功能
+type="number"    调整数量的插件
+type="color"         调整颜色的插件
+type="range"        调整范围的插件
+type="search"       在谷歌中可以实现删除内容的操作
+注意：以上所有的可选属性 都可以随意的使用，因为它不会造成页面的混乱
+
+
+【1.e的快捷键】
+e.altKey、e.shiftKey、e.ctrlKey 分别代表 按住了alt、shift、ctrl按钮
+用这些判断的时候，直接使用就行了，不用再判断键盘的对应编号
+
+【2.change事件】
+它可以检测到被检测标签的变化，只要有任何的变化，就会触发change事件
+
+【3.css3圆角属性】
+css3选择器：    
+:nth-of-type(1)      小括号中的数值是从1开始计数的
+:first-child             选中的第一个元素
+:last-child              选中的最后一个元素
+
+【4.盒子阴影属性】
+box-shadow: x轴 y轴 羽化程度 颜色 是否内阴影
+例：box-shadow:  0px 0px 20px red inset;    
+注意：写inset 后就变为了 内阴影,如果不写就是外阴影；如果不指定颜色的话，颜色值会继承字体的颜色;
+
+【5.文字阴影】
+text-shadow: x轴 y轴 羽化 颜色 内阴影;
+例：text-shadow: 0px 0px 2px #fff;
+注意：有的谷歌浏览器会把文字阴影显示错误，这时候只要给它加上加粗属性即可解决； 文字阴影的羽化，一般来说加2或者3就够了
+
+【6.css3的伪类】
+:after  { content:"这个是content是必须有的属性"; width: 100px; height: 100px; background: pink; /*用伪类写在页面中的元素，它是行内元素，如果想要设置宽高属性的话，就必须转化为块、行内块元素*/  }
+:before { 与after相似 }
+注意：after是在盒子的后面添加内容、before反之
+
+注意：我们以后在解决高度塌陷问题的时候，就不要使用overflow:hidden;  要使用我们clearfix类去解决
+
+面试题    ::after ::before  这是css3的伪类写法，它有自己的名字----伪元素
+
+【7.浏览器的前缀】
+五大浏览器厂商，只有4个内核，
+ie                   -ms-
+火狐               -moz-
+谷歌和苹果     -webkit-
+欧朋               -o-
+
+【8.转换模块】
+transform 是控制的css3的转换模块
+3个核心属性：
+（1）transform: rotate(30deg)       改变角度 deg代表度数的意思
+（2）transform: scale(1,1)              小括号中的数值代表缩放，第一个是x轴 第二个是y轴
+（3）transform: translate(20px,40px)   代表移动的距离，小括号中代表，x和y的距离
+注意：从现在起，这些css3的新属性都要加上各个浏览器的前缀，因为它们的价值比较高，导致兼容性很差；最后一个要写不带前缀的代码;
+
+【9.过度模块】
+transition 它是和hover伪类一起使用的
+书写步骤
+1：按照以往的写默认样式
+2：给元素加hover伪类，在此处写鼠标滑过之后的样式
+3：在默认样式中用transition属性去设置要改变的属性 （属性名 时间 逗号 属性名 时间）例： ( width 1s,height 1s....... )
+注意：transform属性和background很相似，它们都是复合属性，所以在设置多个transform属性的时候，中间用空格隔开即可，不用再写一个transform属性了
+例：transform: scale(1.2,1.2) rotate(360deg);
+
+【10.动画模块】
+书写步骤：
+1.给要添加动画的元素加上 animation: zdydh 3s;
+2.换一行写 @keyframes 动画名称 { 这里是动画内容 } 注意： 前缀别忘了：@-o-keyframes
+3.在大括号中写动画，from{ 代表从0开始的动画 }  to{ 最后位置的动画 }； 还可以写成百分百去控制动画： 0%{  }   50%{  } 100%{  }
+无限次播放：infinite
+逆向播放：alternate
+
+【11.transition动画速度】
+在时间之前加 ease（逐渐慢下来）、ease-in(加速)、ease-out（减速）、ease-in-out（先加速后减速）  默认是匀速
+例： transition: all ease 3s;
+在时间后面再加一个时间，它代表的是停留多少秒之后再执行动画
+例： transition: all ease 3s 4s;  停留4s再运动 
+
+
+
+
+

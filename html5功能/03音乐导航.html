@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	* { margin: 0; padding: 0; list-style: none;}
+	.con { width: 962px; height: 38px; line-height: 38px; margin: 100px auto; border:1px solid #ccc; }
+	.con ul li { width: 106px; height: 38px; border-right: 1px dashed #ccc; float:left; position:relative; overflow:hidden; }
+	.con ul .last { border-right: none; }
+	.con ul li a { color: #333; text-decoration: none; background: url(360/360_nav_bg.png) no-repeat 8px -93px; padding: 0 0 0 30px; position:absolute; z-index: 10; }
+	.con ul li div { position: absolute; z-index: 9; width: 106px; height: 38px; background: pink; bottom: -38px; }
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//页面中的所有div盒子都加上不同颜色
+		var aColor = ['blue','red','orange','gray','yellow','pink','green','gold','purple'];
+		//alert(aColor[1])
+		var myColor;
+		$('.con ul li').each(function(index, element) {
+			myColor = aColor[index];
+            $(element).children('div').css('background',''+myColor+'');//  '+myColor+'
+        });
+		
+		//鼠标滑过li 让粉div动画的形式展示出来
+		$('.con ul li').mouseenter(function(e) {
+            $(this).children('div').stop().animate({'bottom':'0px'},200);
+			//鼠标滑过的时候 只要播放相对应的 MP3即可
+			$('figure audio').eq($(this).index()).get(0).currentTime = 0;//开启音乐之前 先把之前播放的音乐恢复到0的位置
+			$('figure audio').eq($(this).index()).get(0).play();
+        }).mouseleave(function(e) {
+            $(this).children('div').stop().animate({'bottom':'-38px'},200);
+        });
+		
+		$(window).keydown(function(e) {//这句话 代表是键盘被按下的时候 触发的事件
+            //alert(e.keyCode)//e.keyCode它是获取键盘编号
+			//49对应的是键盘1 50对应的是键盘2.......
+/*			if(e.keyCode == 49){
+				$('figure audio').eq(0).get(0).currentTime = 0;
+				$('figure audio').eq(0).get(0).play();
+			}
+			if(e.keyCode == 50){
+				$('figure audio').eq(1).get(0).currentTime = 0;
+				$('figure audio').eq(1).get(0).play();
+			}
+			if(e.keyCode == 51){
+				$('figure audio').eq(2).get(0).currentTime = 0;
+				$('figure audio').eq(2).get(0).play();
+			}
+			if(e.keyCode == 52){
+				$('figure audio').eq(3).get(0).currentTime = 0;
+				$('figure audio').eq(3).get(0).play();
+			}
+			if(e.keyCode == 53){
+				$('figure audio').eq(4).get(0).currentTime = 0;
+				$('figure audio').eq(4).get(0).play();
+			}
+			if(e.keyCode == 54){
+				$('figure audio').eq(5).get(0).currentTime = 0;
+				$('figure audio').eq(5).get(0).play();
+			}*/
+			
+			myMusic(49,0);
+			myMusic(50,1);
+			myMusic(51,2);
+			myMusic(52,3);
+			myMusic(53,4);
+			myMusic(54,5);
+			myMusic(55,6);
+			myMusic(56,7);
+			myMusic(57,8);
+			
+			function myMusic(par1,par2){
+				if(e.keyCode == par1){
+					$('figure audio').eq(par2).get(0).currentTime = 0;
+					$('figure audio').eq(par2).get(0).play();
+				}
+			}
+        });
+
+	})
+</script>
+</head>
+
+<body>
+	<div class="con">
+        <ul>
+            <li><a href="#">我的首页</a><div></div></li>
+            <li><a href="#">新闻头条</a><div></div></li>
+            <li><a href="#">电&nbsp;视&nbsp;剧</a><div></div></li>
+            <li><a href="#">最新电影</a><div></div></li>
+            <li><a href="#">小&nbsp;游&nbsp;戏</a><div></div></li>
+            <li><a href="#">小说大全</a><div></div></li>
+            <li><a href="#">旅游度假</a><div></div></li>
+            <li><a href="#">正品购物</a><div></div></li>
+            <li class="last"><a href="#">今日团购</a><div></div></li>
+        </ul>
+    </div>
+    <figure>
+        <audio src="360/a1.mp3"></audio>
+        <audio src="360/a2.mp3"></audio>
+        <audio src="360/a3.mp3"></audio>
+        <audio src="360/a4.mp3"></audio>
+        <audio src="360/a5.mp3"></audio>
+        <audio src="360/a6.mp3"></audio>
+        <audio src="360/a7.mp3"></audio>
+        <audio src="360/a8.mp3"></audio>
+        <audio src="360/a9.mp3"></audio>
+    </figure>
+</body>
+</html>
