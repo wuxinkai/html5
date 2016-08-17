@@ -1,0 +1,193 @@
+@charset "utf-8";
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    -webkit-user-select: none;
+
+    margin: 0;
+    padding: 0;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+}
+
+header, footer, nav, section, figure, figcaption, aside, article, hgroup {
+    display: block;
+}
+
+a, a:hover, a:active, a:target {
+    color: #000;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+input, select, textarea {
+    display: block;
+    outline: none;
+}
+
+.clearLeft {
+    float: left;
+}
+
+.clearRight {
+    float: right;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+html {
+    font-size: 100px;
+}
+
+body {
+    font-size: 0.12rem;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    height: 0.44rem;
+    background: #1c90f2;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 0.5rem;
+    background: rgba(241, 241, 241, .96);
+}
+
+.sectionBox {
+    margin-top: 0.44rem;
+}
+
+.baseInfo {
+    padding: 0.15rem;
+    height: 0.62rem;
+}
+
+.baseInfo .baseInfo-top {
+    position: relative;
+    height: 0.3rem;
+}
+
+.baseInfo .baseInfo-top .left, .baseInfo .baseInfo-top .right {
+    width: 0.96rem;
+    height: 0.3rem;
+}
+
+.baseInfo .baseInfo-top .left img, .baseInfo .baseInfo-top .right img {
+    float: left;
+    width: 0.32rem;
+    height: 0.3rem;
+}
+
+.baseInfo .baseInfo-top .right img {
+    float: right;
+}
+
+.baseInfo .baseInfo-top .left span, .baseInfo .baseInfo-top .right span {
+    display: block;
+    float: left;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 0.2rem;
+    color: #333;
+}
+
+.baseInfo .baseInfo-top .left span {
+    margin-left: 0.12rem;
+}
+
+.baseInfo .baseInfo-top .right span {
+    float: right;
+    margin-right: 0.12rem;
+}
+
+.baseInfo .baseInfo-top .center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0.98rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-size: 0.12rem;
+    color: #999;
+    text-align: center;
+}
+
+.baseInfo .baseInfo-cen {
+    margin-top: 0.06rem;
+    height: 0.08rem;
+}
+
+.baseInfo .baseInfo-cen span {
+    float: left;
+    height: 0.08rem;
+}
+
+.baseInfo .baseInfo-cen span:nth-child(1) {
+    width: 30%;
+    border-top: 2px solid #f82d2d;
+}
+
+.baseInfo .baseInfo-cen span:nth-child(2) {
+    margin-left: 1%;
+    width: 69%;
+    border-top: 2px solid #1c90f2;
+}
+
+.baseInfo .baseInfo-bot {
+    margin-top: 0.1rem;
+    height: 0.14rem;
+}
+
+.baseInfo .baseInfo-bot .home, .baseInfo .baseInfo-bot .away {
+    width: 0.78rem;
+    height: 0.14rem;
+    line-height: 0.14rem;
+}
+
+.baseInfo .baseInfo-bot .home {
+    padding-left: 0.18rem;
+    background: url("../img/support-left.png") no-repeat;
+    background-size: 0.12rem 0.12rem;
+}
+
+.baseInfo .baseInfo-bot .away {
+    padding-right: 0.18rem;
+    text-align: right;
+    background: url("../img/support-right.png") no-repeat right center;
+    background-size: 0.12rem 0.12rem;
+}
+
+/*
+.sectionBox .player {
+    width: 32rem;
+    height: 18rem;
+    background: url("../img/post.jpg") no-repeat;
+}
+
+#playerVideo {
+    display: block;
+    width: 28rem;
+    height: 100%;
+}*/

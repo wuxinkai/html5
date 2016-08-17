@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<title>无标题文档</title>
+<script src="js/touch.js"></script>
+<style>
+#box {
+	width: 200px;
+	height: 200px;
+	background: red;
+}
+</style>
+<script>
+window.onload=function() {
+	var box=document.getElementById("box");
+	$(box).swipeLeft(
+		function (){
+			console.log("向左滑动");
+		}
+	);
+	$(box).swipeRight(
+		function (){
+			console.log("向右滑动");
+		}
+	);
+	/*box.addEventListener("touchstart",
+		function () {
+			console.log("触摸");
+		},
+		false
+	);
+	box.addEventListener("touchmove",
+		function () {
+			console.log("移动");
+		},
+		false
+	);
+	box.addEventListener("touchend",
+		function () {
+			console.log("离开");
+		},
+		false
+	);*/
+};
+</script>
+</head>
+<body>
+<div id="box">
+</div>
+</body>
+</html>

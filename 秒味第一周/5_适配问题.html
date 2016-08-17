@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320,user-scalable=no" />
+<title>无标题文档</title>
+<style>
+body {
+	margin: 0;
+	background: #f8f8f8;
+}
+header {
+	width: 100%;
+	background: #ef3239;
+	height: 44px;
+	border-bottom: 1px solid #b2b2b2;
+	position: relative;
+}
+.menu {
+	width: 15.5px;
+	height: 11.5px;
+	background: url(img/menuBg.png) no-repeat;
+	position: absolute;
+	top: 13.5px;
+	left: 18px;
+	background-size:contain;
+}
+article {
+	width: 320px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<!--
+	适配方式:
+		1.简单粗暴型 --  设置 viewport 为320
+        	问题: 
+            	1.在部分安卓手机上 不支持 把viewport设置成具体的数值，所以在一些老安卓机上 会有横向滚动条,另外有部分设备铺不满;
+            	2.由于整个视口处于缩放状态，所以不能处理到还原每一个像素        
+-->
+<header>
+	<a href="javascript:;" class="menu"></a>
+</header>
+<article></article>
+</body>
+</html>

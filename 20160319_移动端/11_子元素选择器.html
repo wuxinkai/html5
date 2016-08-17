@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+h2,p {
+	line-height: 30px;
+	font-size: 14px;
+	border:1px solid #000;
+}
+body *:nth-child(1) {
+	background: red;
+}
+/*
+	结构性伪类
+		p:nth-child(1) 找到p标签父级下的第一个子元素,并且标签类型还必须是p标签
+*/
+</style>
+</head>
+<body>
+    <p>p</p>
+    <p>p</p>
+    <p>p</p>
+    <h2>h2</h2>
+    <h2>h2</h2>
+    <p>p</p>
+    <h2>h2</h2>
+    <p>p</p>
+    <p>p</p>
+    <h2>h2</h2>
+    <h2>h2</h2>
+</body>
+</html>

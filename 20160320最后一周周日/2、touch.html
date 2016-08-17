@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>珠峰培训-touch</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            -webkit-user-select: none;
+        }
+
+        #div1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background: #1c90f2;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/animate.css"/>
+</head>
+<body>
+<div id="div1" class=""></div>
+
+<script type="text/javascript" src="js/fastClick.js"></script>
+<script type="text/javascript">
+    FastClick.attach(document.body);//->把body中所有元素的click行为都委托给FastClick进行处理，这个JS解决了300ms延迟的问题
+
+    var oDiv = document.querySelector("#div1");
+    oDiv.onclick = function () {
+        this.className = "animated bounce";
+    }
+</script>
+
+<script type="text/javascript">
+    //->PC:click、mouseover...
+    //->移动端:PC的mouse系列的我们移动端都不用,但是可以使用click->使用click会出现一个问题：300ms延迟(因为在我第一次点击触发的时候,浏览器需要等300ms看一下是否在这个时间内还有二次的点击,如果有点击按照双击处理,没有点击才是按照单击处理)
+
+
+    //->移动端的事件模型:
+    // touch:一个手指的触摸事件模型
+    //->tap(点击)、singleTap(单击)、doubleTap(双击)、longTap(长按)
+    //->swipe(滑动)、swipeUp、swipeDown、swipeLeft、swipeRight
+
+    // gesture:多个手指的触摸事件模型
+    //->rotate(旋转)、pinchIn(缩小)、pinchOut(放大)
+
+    //上述所有的事件类型都需要使用touch/gesture进行模拟
+    //->点击:touchstart记录其实的坐标位置,touchmove/touchend的时候记录当前的坐标位置,和起始的值进行比较,如果偏移在30px(10px)以内属于点击,否则属于滑动
+
+    //->单击:在保证是点击而不是滑动的前提下,我们touchstart的时候开启一个定时器进行记录时间,如果在300ms内,又检测到有一次touchstart触发了,就是双击,如果在这个时间内没有touchstart触发则是单击
+
+    //->长按:当我们touchstart的时候开启一个定时器,并且没有发生移动,如果超过了750ms后还没有触发touchend行为的话,则属于长按
+
+    //swipeUp
+
+
+    //->为了避免click的300ms延迟问题,我们需要使用touch事件模型来进行模拟
+    //touchstart:按下
+    //touchmove:移动
+    //touchend:离开
+    //->但是个一个页面中的click太多的话,自己写代码模拟解决的话浪费时间,我们可以引入一个JS类库“FastClick.js”
+
+
+    //->目前在移动端常用的事件库都有哪些？
+    //->FaskClick:解决click300ms延迟的问题
+    //->Zepto.js:移动端的小型jQuery(它的用法和jQuery基本上一模一样的),因为它没有处理PC的兼容,而且没有jQuery中那么多的方法,只是把一些常用的方法实现了;由于它是单独处理移动端的,所以增加了一些自己独有的:它的animate方法支持了CSS3动画,它增加了一个模块"移动端专用事件模块"
+
+
+</script>
+</body>
+</html>

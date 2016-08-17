@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        input {
+            display: block;
+            outline: none;
+        }
+
+        .box {
+            margin: 20px auto;
+            padding: 20px;
+            width: 500px;
+            border: 1px solid #008000;
+            border-radius: 5px;
+        }
+
+        #userEmail {
+            padding: 0 10px;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #userEmailTip {
+            display: block;
+            margin-top: 10px;
+            padding: 0 10px;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #userEmailTip.ok {
+            border: 1px dashed #08BECE;
+            background: #CDE074;
+            color: #008000;
+        }
+
+        #userEmailTip.error {
+            background: #ff3333;
+            color: #fff;
+        }
+
+        #submit {
+            margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            background: #FF3300;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="text" id="userEmail" placeholder="请输入您的常用邮箱"/>
+    <span id="userEmailTip"></span>
+
+    <div id="submit"></div>
+</div>
+
+<script type="text/javascript">
+    var $ajax = function (url, callBack) {
+        var xhr = new XMLHttpRequest;
+        url.indexOf("?") > -1 ? url += "&_=" + Math.random() : url += "?_=" + Math.random();
+        xhr.open("get", url, false);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && /^2\d{2}$/.test(xhr.status)) {
+                var val = xhr.responseText;
+                val = JSON.parse(val);
+                typeof callBack === "function" ? callBack(val) : null;
+            }
+        };
+        xhr.send(null);
+    };
+
+    var userEmail = document.getElementById("userEmail");
+    var userEmailTip = document.getElementById("userEmailTip");
+
+    userEmail.onblur = function () {
+        var val = this.value.replace(/(^ +| +$)/g, "");
+        if (val.length === 0) {
+            userEmailTip.className = "error";
+            userEmailTip.innerHTML = "邮箱必须填写,不能空着~~";
+            return false;
+        }
+
+        //->验证格式
+        var reg = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        if (!reg.test(val)) {
+            userEmailTip.className = "error";
+            userEmailTip.innerHTML = "邮箱格式不正确~~";
+            return false;
+        }
+
+        //->验证是否存在的
+        var isOk = true;
+        $ajax("checkEmail?email=" + val, function (data) {
+            if (data && data.isExist) {
+                userEmailTip.className = "error";
+                userEmailTip.innerHTML = "邮箱已经被注册过了~~";
+                isOk = false;
+            } else {
+                userEmailTip.className = "ok";
+                userEmailTip.innerHTML = "邮箱合法~~";
+                isOk = true;
+            }
+        });
+        return isOk;
+    };
+
+    var submit = document.getElementById("submit");
+    submit.onclick = function () {
+        if (userEmail.onblur()) {//->点击注册按钮的时候,重新的把userEmail.onblur执行验证邮箱是否合法
+            alert(userEmail.value);
+        } else {
+            userEmail.value = "";
+        }
+    };
+</script>
+</body>
+</html>

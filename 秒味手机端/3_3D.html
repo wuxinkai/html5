@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	padding: 50px;
+	margin: 100px auto;
+	perspective: 200px;
+}
+.div {
+	width: 100px;
+	height: 100px;
+	background: red;
+	transition: 3s;
+	transform-style: preserve-3d;
+}
+span {
+	width: 100px;
+	height: 100px;
+	display: block;
+	background: yellow;
+	transform: rotateX(60deg);
+}
+.box:hover .div {
+	transform: rotateY(360deg);
+}
+/*
+	transform 3D
+		rotateX
+		rotateY
+*/
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="div">
+    	<span></span>
+    </div>
+</div>
+</body>
+</html>

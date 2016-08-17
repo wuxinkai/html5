@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--meta:vp-->
+    <title>珠培训-HTML5表单</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        input {
+            display: block;
+            outline: none;
+        }
+
+        #userAge {
+            margin: 50px;
+            width: 50px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #userRange {
+            margin: 0 50px;
+            width: 100px;
+        }
+
+        .box {
+            position: relative;
+            margin: 10px;
+        }
+
+        .box input {
+            padding-left: 55px;
+            width: 80%;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #008000;
+        }
+
+        /*使用CSS进行新格式的表单验证*/
+        .box input:valid {
+            border: 1px solid #008000;
+        }
+
+        .box input:invalid {
+            border: 1px solid red;
+            box-shadow: 0 0 5px 0 red;
+        }
+
+        /*.box input.error {
+            border: 1px solid red;
+            box-shadow: 0 0 5px 0 red;
+        }*/
+
+        .box .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 30px;
+            border: 1px solid #008000;
+            background: lightcoral;
+        }
+
+        .box .tip {
+            position: absolute;
+            top: 0;
+            left: 55px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+        }
+
+        #submitInfo {
+            margin: 20px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border: 1px solid #008000;
+            background: #B1D7EF;
+            background: -webkit-linear-gradient(top left, #B1D7EF, #E0F2BE, #ffe470);
+            background: linear-gradient(top left, #B1D7EF, #E0F2BE, #ffe470);
+        }
+    </style>
+</head>
+<body>
+<!--<form>
+    <input id="man" type="radio" value="0" name="sex" checked/><label for="man">男</label><br/><br/>
+    <input id="woman" type="radio" value="1" name="sex"/><label for="woman">女</label>
+    <textarea style="resize: none"></textarea>
+    <select>
+        <option>北京</option>
+        <option>北京</option>
+        <option>北京</option>
+        <option>北京</option>
+        <option>北京</option>
+        <option>北京</option>
+    </select>
+    &lt;!&ndash;获取后查询一下,关于常用的表单元素JS如何的获取内容,或者是获取哪个被选中了,以及设置内容和设置选中的元素内容&ndash;&gt;
+</form>-->
+
+<!--
+  HTML5中对于input新增加了很多的类型(在IE6~8浏览器中不兼容)
+  search、url、number、tel、email、range、date、time...
+
+  作用:
+  1、新增加一些特殊的类型,本身提供了特殊的功能(例如:type='date'提供了日历控件)
+  2、使用新的类型,当用户在手机端操作的时候,会给用户针对于不同的类型调取出最符合用户输入的虚拟的键盘(例如：type='number' 调取出来的键盘就是纯数字)
+  3、新增加的这些类型,提供了新的内容格式验证方式
+-->
+<!--<input type="date"/>
+<input type="time"/>
+<input type="color"/>
+<input type="number" max="100" min="1" step="1" value="50"/>
+-->
+
+<!--<input type="number" id="userAge" disabled="disabled" value="25"/>
+<input type="range" id="userRange" max="65" min="18" step="1" value="25"/>
+<script type="text/javascript">
+    //    var userRange = document.querySelector("#userRange"), userAge = document.querySelector("#userAge");
+    //    userRange.addEventListener("input", function (e) {
+    //        userAge.value = this.value;
+    //    }, false);
+
+    //->input事件:在移动端专用的事件,代替PC端的下述事件操作
+    //->PC端操作文本框常用的事件:onblur、onfocus、onkeydown、onkeyup
+</script>-->
+
+<div class="box">
+    <!--placeholder是HTML5给表单元素增加的一个新的属性,为文本框设置默认的提示信息的属性,在IE6~8下兼容 ==>在PC端的IE浏览器中,我们使用原生的JS实现一个和placeholder一模一样的效果如何的处理-->
+    <input type="email" id="userEmail" placeholder="请输入您的邮箱"/>
+
+    <div class="icon"></div>
+</div>
+<div id="submitInfo">立即注册</div>
+
+<script type="text/javascript">
+    var userEmail = document.querySelector("#userEmail");
+    var submitInfo = document.querySelector("#submitInfo");
+    submitInfo.onclick = function () {
+        /*JS中对于新增加的这个几个特殊的类型,我们可以使用checkValidity验证用户输入的内容是否是正确的格式*/
+        if (!userEmail.checkValidity()) {
+            alert("邮箱输入错误");
+        }
+    };
+
+    //    //->传统使用正则来验证的方式
+    //    userEmail.addEventListener("input", function (e) {
+    //        var val = this.value.replace(/(^ +| +$)/g, "");
+    //        var reg = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+    //        this.className = reg.test(val) ? null : "error";
+    //    }, false);
+</script>
+
+<!--使用原生的JS模拟placeholder-->
+<!--<div class="box">
+    <input type="email" id="userTel"/>
+
+    <div class="tip" id="userTelTip">请输入您的电话</div>
+    <div class="icon"></div>
+</div>
+<script type="text/javascript">
+    var userTelTip = document.getElementById("userTelTip");
+    var userTel = document.getElementById("userTel");
+    //->单击提示文字也让文本框获取焦点
+    userTelTip.onclick = function () {
+        userTel.focus();
+    };
+    //->有内容输入提示消失,没有内容提示显示
+    userTel.onkeyup = function () {
+        var val = this.value;
+        userTelTip.style.display = val.length === 0 ? "block" : "none";
+    };
+</script>-->
+</body>
+</html>

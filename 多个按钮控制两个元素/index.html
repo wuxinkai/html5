@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html id="html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <script>
+        var oHtml = document.getElementById("html");
+        var iW= oHtml.getBoundingClientRect().width;
+        oHtml.style.fontSize=iW/16+"px";
+    </script>
+    <style type="text/css">
+        html, body, input {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        input {
+            text-align: center;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border: 1px solid #999;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        input:nth-child(1){ background: url("images/lun_03.png") no-repeat;background-size:cover ;}
+        input:nth-child(2){ background: url("images/lun_05.png") no-repeat;background-size:cover ;}
+        input:nth-child(3){ background: url("images/lun_07.png") no-repeat;background-size:cover ;}
+        input:nth-child(4){ background: url("images/lun_09.png") no-repeat;background-size:cover ;}
+        input:nth-child(5){ background: url("images/lun_11.png") no-repeat;background-size:cover ;}
+        input:nth-child(6){ background: url("images/lun_13.png") no-repeat;background-size:cover ;}
+        input:nth-child(7){ background: url("images/lun_16.png") no-repeat;background-size:cover ;}
+        .lunzi {
+            width: 1.6rem;
+            height: 1.6rem;
+            border: 1px solid #999;
+            border-radius: 50%;
+            position: absolute;
+            left: 2.50rem;
+            top: 7rem;
+        }
+        .right{   position: absolute;  left: 11.5rem;  top: 7rem;}
+        .top img{width: 16rem;display: block; background-size:cover }
+    </style>
+</head>
+<body>
+<div class="top">
+    <img src="images/che_02.png" alt=""/>
+</div>
+<div id="box">
+    <input type="button"/>
+    <input type="button"/>
+    <input type="button"/>
+    <input type="button"/>
+    <input type="button"/>
+    <input type="button"/>
+    <input type="button"/>
+
+    <div class="lunzi left" ></div>
+    <div class="lunzi right" ></div>
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    var box = document.getElementById("box");
+    var lubzi= box.getElementsByTagName("div");
+
+
+    var ary = ["images/lun_03.png","images/lun_05.png","images/lun_07.png","images/lun_09.png","images/lun_11.png","images/lun_13.png","images/lun_16.png"];
+    function bindEvent() {
+        var btnList = document.getElementsByTagName("input");
+        for (var i = 0; i < btnList.length; i++) {
+            btnList[i].colore = i;
+            btnList[i].onclick = function () {
+
+                for(var i=0;i<lubzi.length;i++){
+                    lubzi[i].style.backgroundImage = "url("+ ary[this.colore]+")";
+                    lubzi[i].style.backgroundSize="cover" ;
+
+                }
+
+            }
+        }
+    }
+    bindEvent();
+</script>

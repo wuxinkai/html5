@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>webApp</title>
+    <script type="text/javascript">
+        //->REM布局,我们进来的时候设定一下HTML根元素的fontSize的值,以后页面中所有元素的宽和高等相关的尺寸都是按照根元素的比例进行计算的
+        //->设计稿是:640*960的尺寸
+        //window.devicePixelRatio
+
+        var winW = document.documentElement.clientWidth, winH = document.documentElement.clientHeight;
+        var rootValue = (winW / 640) * 100;
+        document.documentElement.style.fontSize = rootValue + "px";
+    </script>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<header class="header"></header>
+<section class="sectionBox">
+
+
+</section>
+<footer class="footer"></footer>
+
+<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+</body>
+</html>

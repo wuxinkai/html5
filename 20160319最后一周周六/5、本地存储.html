@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript">
+    //->两个页面A/B之间通讯的方式：
+    //1)在A页面跳转到B页面,我们可以在URL地址后面通过"问号传参"的方式给B页面传递一些信息,来实现A/B的通信问题
+    //2)在A页面把一些信息记录到浏览器的本地("本地存储方案"),在B页面在从浏览器中获取信息,这样也实现了A/B的通信
+    //3)在A页面中通过"iframe"引入B页面,这样的话,我们可以通过JS获取B页面中的部分内容信息
+
+
+    //->什么叫做本地存储:把一些信息存储到浏览器里面,不会随着页面的跳转或者刷新丢失数据
+
+    //1、cookie(兼容所有的浏览器)
+    //弊端:
+    //->cookie有时间的限制,不是永久存储的,我们可以设置过期的时间;但是有些时候设置30天销毁,但是可能三分钟就没有了;(很有可能是做了杀毒软件/安全卫士的清理)
+    //->cookie有大小的限制,一般默认一个源最多只能存储4kb
+    //->用户可能出于安全的考虑禁用cookie(无痕浏览器)
+
+    //    cookie.set("zhufeng", 1000);
+    //    console.log(cookie.get("zhufeng"));
+
+
+    //2、webStorage(是HTML5中新增加的,不兼容IE6~8)
+    //->sessionStorage
+    //->localStorage(前端常用的)
+
+    //    localStorage.setItem("zhufeng", 1000);
+    //    localStorage.setItem("peixun", 2000);
+    //    console.log(localStorage.getItem("zhufeng"));
+    //    //localStorage.removeItem("zhufeng");
+    //    //localStorage.clear();
+
+    //->优势:
+    //1)localStorage是永久存储到本地的(只要自己不编写代码清除，或者手动去清除，是没有过期时间的，并且杀毒软件清不掉)
+    //2)localStorage设定每个源可以存储的最大容量是5MB
+
+    //->cookie/localStorage采用的都是明文存储,所以为了安全起见,我们一般不要把重要的内容存储到本地,如果需要存储的话,必须进行严格的加密(不可逆的加密现在一般都采用MD5加密)
+</script>
+</body>
+</html>

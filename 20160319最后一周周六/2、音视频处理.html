@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        audio {
+            display: none;
+        }
+
+        .music {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background: url("file/music.svg") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .move {
+            -webkit-animation: musicMove 1s linear infinite;
+            animation: musicMove 1s linear infinite;
+
+            /*当帧动画结束的时候,让当前的元素停留在最后一帧的位置*/
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        @-webkit-keyframes musicMove {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes musicMove {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="music" id="musicBtn"></div>
+<audio id="audio1" src="file/beyond.mp3" preload="none" loop/>
+
+<script type="text/javascript">
+    var musicBtn = document.getElementById("musicBtn");
+    var musicAudio = document.getElementById("audio1");
+
+    //->当页面加载完成后,我们开始播放我们的音频文件
+    window.addEventListener("load", function () {
+        musicAudio.play();
+        //musicAudio.muted = true;//静音
+        //musicAudio.volume = 0.2;
+
+        //->canplay:监听当前的音频文件是否可以播放了
+        musicAudio.addEventListener("canplay", function () {
+            musicBtn.style.display = "block";
+            musicBtn.className = "music move";
+        }, false);
+
+        //->给按钮绑定点击事件,单击的时候判断当前是否处于播放状态,播放状态让其暂停,暂停状态让其播放
+        musicBtn.addEventListener("touchend", function () {
+            if (musicAudio.paused) {//->是否为暂停状态,此时是暂停状态
+                musicAudio.play();
+                musicBtn.className = "music move";
+            } else {
+                musicAudio.pause();
+                musicBtn.className = "music";
+            }
+        }, false);
+    }, false);
+</script>
+
+
+<!--<audio>
+    <source src="file/beyond.mp3" type="audio/mpeg"/>
+    <source src="file/beyond.wav" type="audio/wav"/>
+    <source src="file/beyond.ogg" type="audio/ogg"/>
+    <embed></embed>
+</audio>-->
+<!--
+  preload:auto(加载页面的时候就把音频文件开始下载了) metadata(开始加载页面的时候,只把音频文件的头部信息加载出来,只有播放的时候才加载主体的信息) none(开始加载页面的时候什么都不去加载,只有播放的时候才开始加载)
+-->
+<!--<audio src="file/beyond.mp3" controls preload="none" autoplay loop/>-->
+</body>
+</html>

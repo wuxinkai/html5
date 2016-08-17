@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>珠峰培训-touch</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            -webkit-user-select: none;
+        }
+
+        #div1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background: #1c90f2;
+
+            -webkit-transition: all 1s linear 0s;
+            transition: all 1s linear 0s;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/animate.css"/>
+</head>
+<body>
+<div id="div1" class=""></div>
+
+<script type="text/javascript" src="js/touch-0.2.14.js"></script>
+<script type="text/javascript">
+    //->百度云手势事件库：http://touch.code.baidu.com/
+
+    //    touch.on("#div1", "tap doubletap hold", function () {
+    //        this.style.webkitTransitionDuration = "1s";
+    //        this.style.webkitTransform = "rotate(360deg)";
+    //        var _this = this;
+    //        window.setTimeout(function () {
+    //            _this.style.webkitTransitionDuration = "0s";
+    //            _this.style.webkitTransform = "";
+    //        }, 1000);
+    //    });
+
+
+    touch.on("#div1", "touchstart", function (e) {
+        e.preventDefault();//->我们以后在处理滑动事件的时候,需要把浏览器的默认的滑动后滚动条滚动的事件的默认行为给禁止掉
+    });
+    touch.on("#div1", "swipeup", function () {
+        this.style.webkitTransitionDuration = "1s";
+        this.style.webkitTransform = "rotate(360deg)";
+        var _this = this;
+        window.setTimeout(function () {
+            _this.style.webkitTransitionDuration = "0s";
+            _this.style.webkitTransform = "";
+        }, 1000);
+    });
+
+    //->hammer.js  swipe.js
+</script>
+</body>
+</html>

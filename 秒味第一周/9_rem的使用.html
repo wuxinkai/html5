@@ -1,0 +1,74 @@
+<!doctype html>
+<html id="html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<script>
+var oHtml = document.getElementById("html");
+var iW= oHtml.getBoundingClientRect().width;//oHtml.clientWidth;
+oHtml.style.fontSize=iW/16+"px";
+</script>
+<title>无标题文档</title>
+<style>
+h1 {
+	margin: 0;
+	font-family:Tahoma, "宋体";
+	font-size: .6rem;
+}
+html {
+	font-size: 14px;
+}
+body {
+	margin: 0;
+	background: #f8f8f8;
+}
+#header {
+	height: 2.2rem;
+	background: #ef3239;
+	border-bottom: 1px solid #b2b2b2;
+	position: relative;
+	text-align: center;
+}
+.menu {
+	width: 0.775rem;
+	height: 0.575rem;
+	background: url(img/menuBg.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: .9rem;
+	top: .675rem;
+}
+#logo {
+	display: inline-block;
+	font-size: .85rem;
+	line-height: 2rem;
+	color: #fff;
+	font-weight:normal;
+}
+.f5 {
+	width: .675rem;
+	height: .75rem;
+	background: url(img/f5.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: .55rem;
+	right: .9rem;
+}
+#logo span {
+	width: .425rem;
+	height: .55rem;
+	display: inline-block;
+	background: url(img/logo.png) no-repeat;
+	background-size:contain;
+	margin-right: .4rem;
+}
+</style>
+</head>
+<body>
+<header id="header">
+	<h1 id="logo"><span></span>miaov</h1>
+	<a href="javascript:;" class="menu"></a>
+    <a href="javascript:;" class="f5"></a>
+</header>
+</body>
+</html>

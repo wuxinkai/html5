@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320,user-scalable=no" />
+<title>无标题文档</title>
+<style>
+html {
+	font-size: 14px;
+}
+body {
+	margin: 0;
+	background: #f8f8f8;
+}
+.box {
+	width: 10rem;
+	height: 10rem;
+	font-size: 20px;
+	background: red;
+}
+/*
+	chrome 下最小字体大小 12
+*/
+</style>
+</head>
+<body>
+<!--
+	适配方式:
+		1.简单粗暴型 --  设置 viewport 为320
+        	问题: 
+            	1.在部分安卓手机上 不支持 把viewport设置成具体的数值，所以在一些老安卓机上 会有横向滚动条,另外有部分设备铺不满;
+            	2.由于整个视口处于缩放状态，所以不能处理到还原每一个像素        
+		2. 百分比
+        	问题：
+            	1.计算太过于麻烦
+                2.难以还原设计图
+		3. rem(root em) 1rem = 1个 html的字体大小
+-->
+<div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media all and (orientation: portrait) {
+            /*竖屏*/
+            body {
+                background: #FFCF78;
+            }
+        }
+
+        @media all and (orientation: landscape) {
+            /*横屏*/
+            body {
+                background: #1c90f2;
+            }
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    //->HTML5/JS/CSS3只能检测横竖屏,不能禁止横竖屏
+    var supportsOrientationChange = "onorientationchange" in window,
+            orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+    window.addEventListener(orientationEvent, function () {
+        if (supportsOrientationChange) {
+            if (Math.abs(window.orientation) === 90) {
+                //->横屏
+            } else {
+                //->竖屏
+            }
+        }
+    }, false);
+
+
+</script>
+</body>
+</html>

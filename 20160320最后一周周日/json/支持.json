@@ -1,0 +1,8 @@
+http://sportswebapi.qq.com/kbs/teamSupport?mid=100000:1468094&type=1 or 2&_=1458407196919&callback=support
+{
+"code": 0, "data":
+{
+"support":"8339"
+}
+, "version": "88e0a90a5738e45f5277abce1e066a6c"
+}

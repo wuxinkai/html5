@@ -1,0 +1,28 @@
+1、什么叫做webApp?
+ ->其实就是一个网页,在移动端通过浏览器(在微信或者QQ)打开这个页面,和我们正常的做移动端的响应式布局页面是一样的
+ ->我们做完页面后,可以使用phoneGap、React、API Cloud等技术把页面封装成一个App应用,让用户可以安装和下载
+
+2、为什么会出现webApp?
+
+ 使用传统的Object-c或者Java开发App的弊端
+ ->开发成本高(IOS、安卓平台分别开发),IOS和安卓开发人员的工资太高了
+ ->审核周期长：IOS发布应用需要七天的审核,审核不通过改完后再发布还需要七天的审核时间
+ ->需要用户的自主性太强
+
+ 使用H5来开发webApp的弊端
+ ->H5是基于浏览器运行的,如果当浏览器不支持调取手机的硬件或者内部的软件功能,我们的H5是实现不了的,例如：调取手机的通讯录、调取手机的摄像头等功能大部分浏览器都是不支持的
+ ->使用H5开发的app运行的流畅度不高
+ ->H5的离线缓存技术和原生的App相比，没有可比性
+ ....
+
+
+->hyBird模式:App使用的是原生开发的,里面需要经常改变的内容,我们用h5开发 ->我们开发的h5页面可以嵌套在App中运行(webView)
+
+->在hyBird模式中,我们涉及到H5和App的通信
+->IOS:伪URL协议
+  http://wangying.mengjiao.com/  王莹App:getList  H5:window.location.href="http://wangying.mengjiao.com/?callback=getList"
+
+->安卓:jsBridge
+
+
+

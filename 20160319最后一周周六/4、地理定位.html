@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function reportPosition() {
+        function normalFn(pos) {
+            console.log("纬度=" + pos.coords.latitude + ",经度=" + pos.coords.longitude + ",精准度=" + pos.coords.accuracy);
+        }
+
+        function errorFn(err) {
+            console.log(err.code + "==>" + err.message);
+        }
+
+        navigator.geolocation.getCurrentPosition(normalFn, errorFn);
+    }
+    reportPosition();
+</script>
+</body>
+</html>

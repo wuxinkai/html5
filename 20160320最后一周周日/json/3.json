@@ -1,0 +1,45 @@
+http://sportswebapi.qq.com/html/matchDetail?mid=100000:1468094&_=1458406171006&callback=matchDetailCallback
+[
+  0,
+  {
+    "matchInfo": {
+      "startTime": "2016-03-19 10:30:00",
+      "mid": "100000:1468094",
+      "matchType": "2",
+      "matchDesc": "NBA\u5e38\u89c4\u8d5b",
+      "leftId": "21",
+      "leftName": "\u592a\u9633",
+      "leftBadge": "http:\/\/mat1.gtimg.com\/sports\/nba\/logo\/1602\/21.png",
+      "leftGoal": "95",
+      "leftHasUrl": "1",
+      "rightId": "13",
+      "rightName": "\u6e56\u4eba",
+      "rightBadge": "http:\/\/mat1.gtimg.com\/sports\/nba\/logo\/1602\/13.png",
+      "rightGoal": "90",
+      "rightHasUrl": "1",
+      "matchPeriod": "2",
+      "quarter": "\u7b2c4\u8282",
+      "quarterTime": "00:00",
+      "liveType": "4",
+      "livePeriod": "2"
+    },
+    "liveId": "100209800",
+    "matchPic": "",
+    "onlineCnt": "275593",
+    "liveIdPictureWord": "10012053",
+    "targetId": "1186786967",
+    "updateFrequency": "1800",
+    "quarterDesc": "\u7b2c4\u8282 00:00",
+    "tabSwitchGuess": "1",
+    "isPay": "1",
+    "roseNewsId": "SPO2016031802378800",
+    "programId": "4291",
+    "competitionId": "100000",
+    "tvLiveId": "100303200",
+    "rightSupport": "118588",
+    "leftSupport": "8337",
+    "neuSupport": "32",
+    "ifHasVideo": "1"
+  },
+  ""
+]

@@ -1,0 +1,476 @@
+.loginBG{
+	background:url("../images/loginBackground.png") no-repeat;
+	background-size:100vw 100vh;
+}
+.shareBG{
+	background:url("../images/shareBg.png") no-repeat;
+	background-size:100vw 100vh;
+}
+.registBG{
+	background:url("../images/registBG.png") no-repeat;
+	background-size:100vw 100vh;
+}
+.startShakeBG{
+	background:url("../images/startShakeBG.png") no-repeat;
+	background-size:100vw 100vh;
+}
+.startShakeButtonBG{
+	background:url("../images/startShakeButtonBG.png") no-repeat;
+	background-size:30vw 6vh;
+}
+
+.shakingPhoneBG{
+	background:url("../images/shakingPhone.png") no-repeat;
+	background-size:100vw 100vh;
+}
+.twoDimensionCodeBG{
+	background:url("../images/twoDimensionCode.png") no-repeat;
+	background-size:100vw 100vh;
+}
+.shakeLoginBG{
+	background:url("../images/shakeLoginBG.png") no-repeat;
+	background-size:100vw 100vh;
+}
+
+.font2_5vmin{
+	font-size:2.5vmin;
+}
+.font3vmin{
+	font-size:3vmin;
+}
+.font3_6vmin{
+	font-size:3.6vmin;
+}
+.font4_5vmin{
+	font-size:4.5vmin;
+}
+.font4vmin{
+	font-size:4vmin;
+}
+.font5vmin{
+	font-size:5vmin;
+}
+.font6vmin{
+	font-size:6vmin;
+}
+.font8vmin{
+	font-size:8vmin;
+}
+.fontBold{
+	font-weight:bold;
+}
+.conw{
+	width:100vw;
+}
+.conh{
+	height:100vh;
+}
+
+.h2vh{
+	height:2vh;
+	line-height:2vh;
+}
+
+.h3vh{
+	height:3vh;
+	line-height:3vh;
+}
+.h4vh{
+	height:4vh;
+	line-height:4vh;
+}
+.h4_5vh{
+	height:4.5vh;
+	line-height:4.5vh;
+}
+.h5vh{
+	height:5vh;
+	line-height:5vh;
+}
+.h6vh{
+	height:6vh;
+	line-height:6vh;
+}
+.h7vh{
+	height:7vh;
+	line-height:7vh;
+}
+
+.h8vh{
+	height:8vh;
+	line-height:8vh;
+}
+.h9vh{
+	height:9vh;
+	line-height:9vh;
+}
+.h10vh{
+	height:10vh;
+	line-height:10vh;
+}
+.h11vh{
+	height:11vh;
+	line-height:11vh;
+}
+.h13vh{
+	height:13vh;
+	line-height:13vh;
+}
+.h15vh{
+	height:15vh;
+}
+.h18vh{
+	height:18vh;
+	line-height:18vh;
+}
+.h120vh{
+	height:20vh;
+	line-height:20vh;
+}
+.h30vh{
+	height:30vh;
+}
+.h38vh{
+	height:38vh;
+}
+.h45vh{
+	height:45vh;
+}
+.h46vh{
+	height:46vh;
+}
+.h18vhNoLine{
+	height:18vh;
+}
+.h46vh{
+	height:46vh;
+}
+.h42vh{
+	height:42vh;
+}
+.h43vh{
+	height:43vh;
+}
+.h46vh{
+	height:46vh;
+}
+.h55vh{
+	height:55vh;
+}
+
+.separationH7vh{
+	height:7vh;
+}
+.separationLineH5vh{
+	line-height:5vh;
+}
+
+
+.w10vw{
+	width:10vw;
+}
+.w11vw{
+	width:11vw;
+}
+.w15vw{
+	width:15vw;
+}
+.w20vw{
+	width:20vw;
+}
+.w22vw{
+	width:22vw;
+}
+.w30vw{
+	width:30vw;
+}
+.w50vw{
+	width:50vw;
+}
+.w60vw{
+	width:60vw;
+}
+.w62vw{
+	width:62vw;
+}
+.w80vw{
+	width:80vw;
+}
+.w90vw{
+	width:90vw;
+}
+
+.margin0{
+	margin:0vh;
+}
+
+.marginTop_5vh{
+	margin-top:0.5vh;
+}
+.marginTop_7vh{
+	margin-top:0.7vh;
+}
+.marginTop1vh{
+	margin-top:1vh;
+}
+.marginTop1_9vh{
+	margin-top:1.9vh;
+}
+.marginTop2vh{
+	margin-top:2vh;
+}
+.marginTop2_3vh{
+	margin-top:2.3vh;
+}
+.marginTop3vh{
+	margin-Top:3vh;
+}
+.marginTop4vh{
+	margin-Top:4vh;
+}
+.marginTop2_5vh{
+	margin-Top:2.5vh;
+}
+.marginTop6vh{
+	margin-Top:6vh;
+}
+.marginTop_9vh{
+	margin-Top:-9vh;
+}
+.marginTop18vh{
+	margin-top:18vh;
+}
+.marginTop30vh{
+	margin-top:30vh;
+}
+.marginTop50vh{
+	margin-top:50vh;
+}
+.marginTop20vh{
+	margin-top:20vh;
+}
+.marginTop23vh{
+	margin-top:23vh;
+}
+.marginBottom3vh{
+	margin-bottom:3vh;
+}
+.marginBottom0vh{
+	margin-bottom:0vh;
+}
+.marginLRAuto{
+	margin-left:auto;
+	margin-right:auto;
+}
+.marginLeft2vw{
+	margin-left:2vw;
+}
+.marginLeft3vw{
+	margin-left:3vw;
+}
+.marginLeft15vw{
+	margin-left:15vw;
+}
+.marginLeft_8vw{
+	margin-left:-8vw;
+}
+.marginRight3vw{
+	margin-right:3vw;
+}
+
+
+.marginLeftRight{
+	margin-left:0px;
+	margin-right:0px;
+}
+.marginLeftRight15{
+	margin-left:15px;
+	margin-right:15px;
+}
+.bgColorRGBA{
+	background:rgba(0,0,0,0.3);
+}
+.bgColorFFF{
+	background-color:#fff;
+}
+.bgColorEEE{
+	background:#eeeeee;
+}
+.bgColorRoseRed{
+	background-color:#d41146;
+	border:solid 1px #d41146;
+}
+.bgColorRoseRed:hover{
+	background-color:#d41146;
+	color:#fff;
+	border:solid 1px #d41146;
+}
+.borderColorRosered{
+	border:solid 1px #d41146;
+}
+.borderRadius{
+	border-radius:5px;
+}
+.borderRadius10{
+	border-radius:10px;
+}
+.borderRadius30{
+	border-radius:30vmin;
+}
+.borderColorGray{
+	border:solid 1px #e6908c;
+}
+.borderColorFFF{
+	border:solid 1px #fff;
+}
+
+.borderShadowYellow{
+	box-shadow:0 0 2px 1px #f09708;
+}
+.colorFFF{
+	color:#fff;
+}
+
+
+.colorRoseRed{
+	color:#d41146;
+}
+.colorBlack{
+	color:#434343;	
+}
+.colorDarkBlue{
+	color:#0068b7;
+}
+
+.floatRight{
+	float:right;
+}
+.cursor{
+	cursor:pointer;
+}
+.relative{
+	position:relative;
+}
+.padding0{
+	padding:0;
+}
+.paddingLeftRight{
+	padding-left:0px;
+	padding-right:0px;
+}
+.paddingLeftRight15{
+	padding-left:15px;
+	padding-right:15px;
+}
+.paddingLeft{
+	padding-left:0px;
+}
+.paddingRight{
+	padding-right:0px;
+}
+
+
+.textIndent2vw{
+	text-indent:2vw;
+}
+.absolute0{
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:0;
+}
+.absolute1{
+	position:absolute;
+	right:0px;
+	z-index:0;
+}
+.absolute2{
+	position:absolute;
+	right:0px;
+	z-index:1;
+}
+/*底部定位*/
+.absoluteBottom{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:0;
+}
+
+/*分享页活动规则定位*/
+.absoluteActiveRule{
+	position:absolute;
+	left:31vw;
+	top:25vh;
+	z-index:0;
+}
+
+/*注册页活动规则定位*/
+.absoluteRegistRule{
+	position:absolute;
+	left:37vw;
+	top:49vh;
+	z-index:0;
+	
+}
+
+/*开始摇一摇按钮定位*/
+.absoluteStartShakeButton{
+	position:absolute;
+	z-index:0;
+	top:64vh;
+	left:35vw;
+}
+
+
+/*立即关注定位*/
+.absoluteNowAttention{
+	position:absolute;
+	z-index:0;
+	top:70vh;
+	left:35vw;
+}
+
+
+/*摇摆当中图片效果定位*/
+.absoluteShakingPhone{
+	position:absolute;
+	z-index:0;
+	top:21vh;
+	left:8.8vw;
+}
+
+
+/*立即领取按钮定位*/
+.absoluteNowGet{
+	position:absolute;
+	z-index:0;
+	top:71vh;
+	left:35vw;
+}
+.floatRight{
+	float:right;
+}
+
+.displayBlock{
+	display:block;
+}
+.displayNone{
+	display:none;
+}
+
+
+/*活动规则关闭按钮定位*/
+.downIco{
+	position:relative;
+	right:-7vw;
+	top:-3vh;
+	
+}
+
+
+
+/*重新发送按钮填充*/
+.paddingAgain{
+	padding: 5px 24px;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+html {height: 100%;}
+</style>
+<script>
+setSize();
+function setSize(){
+	var oHtml=document.getElementsByTagName("html")[0];
+	var iW= oHtml.getBoundingClientRect().width;
+	oHtml.style.fontSize=iW/16+"px";
+}
+window.addEventListener("orientationchange",
+	function(){
+		setSize();
+	},
+	false
+);
+</script>
+<style>
+#box {
+	width: 100px;
+	height: 100px;
+	background: red;
+}	
+</style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html id="html">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<script>
+var oHtml = document.getElementById("html");
+var iW= oHtml.getBoundingClientRect().width;//oHtml.clientWidth;
+oHtml.style.fontSize=iW/16+"px";
+</script>
+<title>无标题文档</title>
+<style>
+h1 {
+	margin: 0;
+	font-family:Tahoma, "宋体";
+	font-size: .6rem;
+}
+a {
+	text-decoration: none;
+}
+html {
+	font-size: 14px;
+}
+body {
+	margin: 0;
+	background: #f8f8f8;
+}
+.ico{
+	background:url(img/ico.png) no-repeat;
+	background-size: 1.9rem .75rem;
+}
+#header {
+	height: 2.2rem;
+	background: #ef3239;
+	border-bottom: 1px solid #b2b2b2;
+	position: relative;
+	text-align: center;
+}
+.menu {
+	width: 0.775rem;
+	height: 0.575rem;
+	position: absolute;
+	left: .9rem;
+	top: .675rem;
+	
+}
+#logo {
+	display: inline-block;
+	font-size: .85rem;
+	line-height: 2rem;
+	color: #fff;
+	font-weight:normal;
+}
+.f5 {
+	width: .675rem;
+	height: .75rem;
+	position: absolute;
+	background-position:-.8rem 0;
+	top: .55rem;
+	right: .9rem;
+}
+#logo span {
+	width: .425rem;
+	height: .55rem;
+	display: inline-block;
+	background-position:-1.5rem 0;
+	margin-right: .4rem;
+}
+#nav {
+	background: #fff;
+	height: 2.2rem;
+	border-bottom: 1px solid #b2b2b2;
+}
+#nav a {
+	float: left;
+	width: 4rem;
+	font-size: .75rem;
+	line-height: 2.2rem;
+	text-align: center;
+	color: #848689;
+}
+#nav a:nth-child(1) {
+	color: #f35f5f;
+	background: url(img/ico1.png) no-repeat  2.75rem .875rem;
+	background-size: .775rem .45rem;
+}
+</style>
+</head>
+<body>
+<header id="header">
+	<h1 id="logo"><span class="ico"></span>miaov</h1>
+	<a href="javascript:;" class="menu ico"></a>
+    <a href="javascript:;" class="f5 ico"></a>
+</header>
+<nav id="nav">
+	<a href="javascript:;">综合</a>
+    <a href="javascript:;">价格</a>
+    <a href="javascript:;">销量</a>
+    <a href="javascript:;">筛选</a>
+</nav>
+</body>
+</html>

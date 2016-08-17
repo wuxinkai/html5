@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
+        <style type="text/css">
+		*{margin:0;padding:0;}
+		html,body{
+			width:100%;
+			height:100%;
+			 overflow: hidden;
+		}
+		.page{
+			width:100%;
+			height:100%;
+			transform: translateY(0);
+			transition: all 1s;
+		}
+		.box{
+			width:100%;
+			height:100%;
+		}
+		.page1{
+			background-color: red;
+		}
+		.page2{
+			background-color: green;
+		}
+		.page3{
+			background-color: blueviolet;
+		}
+		.page4{
+			background-color: lightpink;
+		}
+		.page5{
+			background-color: mediumpurple;
+		}
+        </style>
+        <script type="text/javascript" src="zepto.min.js"></script>
+        <script type="text/javascript" src="touch.js"></script>
+        <script type="text/javascript">
+        /*强哥演示版*/
+        $(function() {
+        	var $key=0;
+        	var H=$(window).height();
+        	document.addEventListener("swipeUp", function(event){
+        		/*alert("你好吗");*/
+        		event.preventDefault();  
+        		/*$key++;
+        		if($key>4)
+        		{
+        			$key=4;
+        		}*/
+        		++$key>4?$key=4:$key;
+        		$(".page").css("transform","translateY("+-$key*H+"px)");
+
+        	}, false);
+             document.addEventListener("swipeDown", function(event){
+        		/*alert("你好吗");*/
+        		event.preventDefault();  
+        		/*$key++;
+        		if($key>4)
+        		{
+        			$key=4;
+        		}*/
+        		--$key<0?$key=0:$key;
+        		$(".page").css("transform","translateY("+-$key*H+"px)");
+
+        	}, false);
+
+
+        });
+        </script>
+    </head>
+    <body>
+      <div class="page">
+      	<div class="box page1">1</div>
+      	<div class="box page2">2</div>
+      	<div class="box page3">3</div>
+      	<div class="box page4">4</div>
+      	<div class="box page5">5</div>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript"src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="blur-div">
+    <img src="dog.jpg" id="blur-img" alt=""/>
+    <canvas id="canvas"></canvas>
+</div>
+
+<a href="javascript:reset()" class="button" id="button-reset">模糊</a>
+<a href="javascript:show()" class="button" id="button-show">显示</a>
+</body>
+</html>
+<style type="text/css">
+    #blur-img{
+        display: block;
+        width: 470px;
+        height: 285px;
+        margin: 100px auto;
+        background: red;
+        /*模糊*/
+        filter:blur(5px);
+        -webkit-filter:blur(5px);
+        -ms-filter:blur(5px);
+        -moz-filter:blur(5px);
+        -o-filter:blur(5px);
+        /*定位*/
+        position: absolute;
+        left: 0;top: 0;
+    }
+    #blur-div{
+        display: block;
+        width: 470px;
+        height: 285px;
+        margin: 100px auto;
+       position: relative;
+
+    }
+    #canvas{
+        display: block;
+        margin: 100px auto;
+        position: absolute;
+        left: 0;top: 0;
+        z-index: 100;
+
+
+    }
+    .button{
+        display: block;
+        position: absolute;
+        z-index: 200;
+        width: 100px;
+        height: 30px;
+        color:  white;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+        border-radius:5px ;
+        border: 1px solid red;
+    }
+    #button-reset{
+        left: 200px;
+        bottom: 20px;
+        background: blue;
+    }
+    #button-reset:hover{
+        background: deepskyblue;
+    }
+    #button-show{
+        left: 400px;
+        bottom: 20px;
+        background: green;
+    }
+    #button-show:hover{
+        background: deeppink;
+    }
+</style>
+<script type="text/javascript">
+    var canvasWidth=470;
+    var canvasHeight=285;
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d"); /*canva绘图环境*/
+
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    var imgs= new Image();
+    var clippingRegion={x:320,y:110, r:50} //移动的位置
+    imgs.src = "dog.jpg";
+    imgs.onload=function(e){  //图标大通过事件加载
+
+        initCanvas()  //当图片加载完成后
+    }
+   function initCanvas(){
+       clippingRegion={x:320,y:110, r:50}  //点击按钮第一次调用
+       draw(imgs,clippingRegion) //初始化操作
+   }
+    function setClippingRegion(){
+        context.beginPath() //创建路径
+        context.arc(clippingRegion.x,clippingRegion.y,clippingRegion.r,0,Math.PI*2,false)
+        context.clip()
+    }
+    function draw(imgs,clippingRegion){
+        context.clearRect(0,0,canvas.width,canvas.height); //清空默认
+        context.save()  //存储当前状态
+        setClippingRegion(clippingRegion)
+        context.drawImage(imgs,0,0)  //drawImage绘制图像接口 起点是 0 0点左上角
+        context.restore() //状态恢复
+    }
+
+//    点击事件
+    function reset(){
+        initCanvas()
+    }
+
+    function show(){
+        clippingRegion.r = 1000  //让整个剪辑区变大
+        draw(imgs,clippingRegion)
+    }
+</script>

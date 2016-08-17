@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+var iScale = 1;
+iScale = 1 / window.devicePixelRatio;
+document.write('<meta name="viewport" content="width=device-width,initial-scale='+iScale+',minimum-scale ='+iScale+',maximum-scale= '+iScale+'" />');
+//alert(window.devicePixelRatio);
+</script>
+<!-- <meta name="viewport" content="width=device-width,initial-scale=.5,minimum-scale =.5,maximum-scale= .5" /> -->
+<!--
+	width (device-width || value)
+		-物理像素 与 css像素
+    user-scalable (no||yes) 是否允许缩放
+    initial-scale 初始比例
+    minimum-scale 最小缩放比例
+    maximum-scale 最大缩放比例
+    
+    1px
+    
+    视口和缩放比例的关系:
+    实际像素 =  device-width / 缩放比例;
+-->
+<title>无标题文档</title>
+<style>
+#box {
+	width: 300px;
+	height: 300px;
+	background: red;
+}
+</style>
+</head>
+<body>
+<!--
+	物理像素 -- 设备本身的分辨率
+    实际像素 -- 文档真实的分辨率
+-->
+<div id="box"></div>
+</body>
+</html>
