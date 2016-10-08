@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+			$('h1').html($(window).width());
+			$(window).resize(function(e) {//如果是js的写法应该是 onresize
+                //console.log($(window).width());
+				$('h1').html($(window).width());
+            });
+		})
+    </script>
+</head>
+
+<body>
+	<h1></h1>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<!--英文角色   也可以中文zh-cn-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- 通过http：设置utf-8-->
+    <!--<meta http-equiv="content-type" content="text/html charset=utf-8">-->
+    <!-- 作者名字-->
+    <meta name="author" content="吴鑫凯">
+    <!-- 页面关键字-->
+    <meta name="keywords" content="html5,css3,响应式">
+    <!-- 三秒钟跳转到新页面(百度)-->
+    <!--<meta http-equiv="refresh" content="3;https://www.baidu.com/">-->
+    <title></title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: abc;
+            src:url( 'BrushScriptStd.otf')
+        }
+/*                                                                 线与线的距离          空白内容隐藏        表格不变文字换行*/
+        .table{ width: 400px; height: 300px; text-align: center;border-spacing:10px; empty-cells: hide; table-layout: fixed;}
+        /*设置内边框颜色*/
+        .table tr th,.table tr td{border:  1px solid red}
+    </style>
+</head>
+<body style="margin:50px 0 0 100px; font-size: 18px; ">
+<!--文本元素-->
+    <h1>（一）文本元素</h1>
+
+    <b> b 关键字和名称</b><br/>
+
+    csdklsdckmdcdsl<wbr>csdcs <wbr>dlockd<wbr>fdifdi <br/>
+
+    <wbr>就是响应式换行 <br/>
+
+    <s>s 表示不强调删除</s><br/>
+
+    <dle>del 强调删除标签</dle><br/>
+
+    <i>i 表示外文词汇和科技术语</i><br/>
+
+    <em>em 表示强调</em><br/>
+
+    <u>U 给文字加下划线</u><br/>
+
+    <ins>ins 强点添加一段文本</ins><br/>
+
+    <small>small 添加小号字</small><br/>
+
+    添加下标<sub>sub </sub> <br/>
+
+    添加上标<sup>sup </sup> <br/>
+
+    <code>code表示计算机代码 表示输出和输入</code> <br/>
+
+    <var>var表示编程语言变量</var> <br/>
+
+    <kbd>kbd 表示用户输入</kbd> <br/>
+
+    <samp>samp表示程序或计算机输入</samp> <br/>
+
+    <abbr>addr表示缩写</abbr> <br/>
+
+    <dfn>dfn表示术语（倾斜）</dfn> <br/>
+
+    <q> q双引号</q> <br/>
+
+    <cite>cite 引文作品标题</cite> <br/>
+                                    <!-- rp包含括号   rt包含拼音-->
+ruby：<ruby style="font-size: 50px"> 饕 <rp>（</rp>  <rt>tāo</rt> <rp>）</rp>  餮 <rp>（</rp> <rt>tiè</rt> <rp>）</rp> </ruby> <br/>
+
+    <!--让文字倒着排列   ltr让文字顺时针排列-->
+    <bdo dir="rtl">设置文本输出方向（rtl让文字倒着排列   ltr让文字顺时针排列）</bdo><br/>
+
+    <mark> mark突出显示文字</mark><br/>
+
+    <time> time表示时间日期</time><br/>
+
+    <h1>（二）超链接</h1>
+
+    <a href="https://www.baidu.com/" target="_blank">（百度）在新建窗口打开</a> <br/><br/>
+
+    <a href="https://www.baidu.com/" target="_self">（百度）在当前页面打开</a>
+    <br/>
+<br/><br/>
+    <h1>name在a标签的用发（跳转）（只能标签链接a标签）</h1>
+    <!-- name在a标签的用发-->
+   <div>
+       <a href="#1">第一章</a>
+       <a href="#2">第二章</a>
+       <a href="#3">第三章</a>
+   </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <a name="1">第一章内容</a>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <a name="2">第二章内容</a>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <a name="3">第三章内容</a>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <h1>分组元素</h1>
+    <br/>
+    <p>p: 是段落标签</p>
+    <div>div：通用分组</div>
+    <blockquote>blockquote：这是一个大段的来自别的地方的内容</blockquote>
+    <hr/>
+    <blockquote>blockquote：这是一个大段的来自别的地方的内容</blockquote>
+    <pre>
+        pre：按照编辑器的样式显示
+                    pre：按照编辑器的样式显示
+        pre：按照编辑器的样式显示
+    </pre>
+<!--ol元素样式       倒叙排列    设置样式 1 a A i I-->
+    <ol start="5" reversed tyle="i">
+        <li>我是1</li>
+        <!-- value;可以改变编号-->
+        <li value="8">我是2</li>
+        <li>我是3</li>
+        <li>我是4</li>
+    </ol>
+    <br/>
+<!--列表标签-->
+    <dl>
+        <dt>dl dt dd 是说明列表（标题）</dt>
+        <dd>内容内容内容内容内容内容内容</dd>
+        <dd>内容内容内容内容内容内容内容</dd>
+        <dd>内容内容内容内容内容内容内容</dd>
+    </dl>
+    <br/>
+
+<!--图文混排-->
+    <figure>
+        <figcaption>文字部分（这是一图片）</figcaption>
+        <img src="images/QQ截图20130611154232.png"/>
+    </figure>
+<!--表格标签                       加边线-->
+    <table style="width: 300px;" border="1">
+        <!--设置竖行改变颜色 -->
+        <colgroup>
+            <!--第一列-->
+            <col>
+            <!-- 第二列-->
+            <col style="background: pink">
+        </colgroup>
+        <!-- 添加标题-->
+        <caption>这是一个表格</caption>
+        <thead>
+            <tr>
+                <!-- 竖着5个合并-->
+                <th rowspan="5">基本情况</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td>
+                <td>28</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>28</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>28</td>
+                <td>男</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- 横向3个合并-->
+                <td colspan="3">合并单元格</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br/>
+    <br/>
+    <h1>文档元素</h1>
+    <br/>
+    <br/>
+<!--页面的表头部分  logo 标题 导航  -->
+    <hrader>
+        <!-- 标题组合标签-->
+        <hgroup>
+            <h1>正标题</h1>
+            <h4>副标题</h4>
+        </hgroup>
+        <!-- 导航-->
+        <nav>
+
+        </nav>
+    </hrader>
+<!--文档组合部分 主体-->
+    <section>
+        这里是文档的主体
+    </section>
+<!--傍边的侧栏-->
+    <aside>
+        侧边栏
+    </aside>
+<!--表示文档-->
+
+<!--嵌入的内容（相当body）   博文列表  -->
+    <article>
+        <hrader>.....</hrader>
+        <section>.....</section>
+        <footer>.....</footer>
+        <!-- 表示文档   在article表示联系信息 -->
+        <address>表示文档</address>
+    </article>
+<!--放在尾部 版权声明 友情链接-->
+    <footer>
+        <!-- 表示文档   联系电话-->
+        <address>表示文档</address>
+    </footer>
+    <br/>
+    <br/>
+    <br/>
+    <h1>嵌入标签</h1>
+    <!--                                 服务器获取坐标 图片不加载的时候显示文字  -->
+    <img src="images/QQ截图20130611154232.png" ismap  alt="微信"/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <a href="https://www.baidu.com/" target="in">百度</a> /
+        <a href="http://www.qq.com/" target="in">搜搜</a>
+        <br/>
+        <br/>
+        <br/>
+        <!--           默认样式           -->
+        <iframe src="https://www.baidu.com/"  width="600" height="500" name="in">
+        </iframe>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+<!--在页面嵌套一个插件-->
+    <embed src="http://sc.chinaz.com/FlashDemo.aspx?downloadID=20201590014303" width="800" height="600" type=""/>
+    <br/>
+    <br/>
+    <br/>
+<!--进度条-->
+<!--     在30%          最大是100-->
+    <progress value="30" max="100" ></progress>
+<!--显示范围     显示20    最小10   最大100  提醒值 小于40大于80变色   最佳值-->
+    <meter value="20" min="10" max="100" low="40" high="80" optimum="60"></meter>
+
+<!--音频和视频-->
+    <video src="" controls ></video>
+    <audio ></audio>
+
+<!--表单元素-->
+<br/>
+<br/>
+<br/>
+<h1>表单元素</h1>
+<br/>
+<!--      是否记录             在新页面打开     提交方式         提交到哪里                设置是否执行客户端验证  -->
+    <form autocomplete="on" target="_blank" method="get" action="www.//http:baidu.com" novalidate="novalidate" id="register">
+        <!--            焦点在input里  被禁用  单独设置不提示                 用于提交数据-->
+        用户名：<input autofocus   disabled  autocomplete="off" type="text" name="user" value="默认值" />
+        <!---->
+        <button>提交按钮</button>
+    </form>
+    <!--                         连接上面form      -->
+    电子邮件<input name="email" form="register" type="text"/>
+<!--对表单进行分组  禁用    -->
+    <fieldset disabled form="" name="">
+        <legend>注册分组</legend>
+        <label >
+            用户名：
+        </label>
+        <input type="text"/><br/><br/><br/>
+<!--                提交方式-->
+        <button type="submit" formenctype="https://www.baidu.com/">提交按钮</button>
+        <!--          重置-->
+        <button type="reset">提交按钮</button>
+        <!--    普通按钮-->
+        <button type="button">提交按钮</button>
+    </fieldset>
+
+<!--type属性-->
+<br/>
+<br/>
+<br/>
+
+    <form action="www.//http:baidu.com">
+    <!--        基本样式       长长是5       宽度                     用户名     只能读不能更改（可以提交）  不能用-->
+         <input type="text" maxlength="5" size="30" value="默认值" name="user" readonly                 disabled/>
+        <button>点击</button>
+        <input type="text" list="abc"/>
+    </form>
+<!--数据列表-->
+    <datalist id="abc">
+        <option value="">苹果</option>
+        <option value="">桔子</option>
+        <option value="香蕉"/>
+    </datalist>
+<br/>
+<br/>
+    <h2>密码</h2>
+<!--                              提示-->
+    <input type="password" placeholder="请输入密码"/>
+    <h2>type="search"</h2>
+<!--会出现一个差号   火狐不支持-->
+    <input type="search" value="出现差号"/><br/><br/>
+<!--   样式              处理数字       最大10  最小0      2位数         两个数一变-->
+    <input type="number" value="处理数字" max="10" min="0" maxlength="2" step="2"/><br/>
+    <h2>数字范围</h2>
+    <input type="reset" value="处理数字的范围"/><br/><br/>
+<!--获取年月日  谷歌支持-->
+    <h2>年月日 火狐不支持</h2>
+    <input type="date" /><br/><br/>
+<!--年月-->
+    <input type="month" /><br/><br/>
+<!--小时-->
+    <input type="time" /><br/><br/>
+<!--第几周-->
+    <input type="week" /><br/><br/>
+<!--获取颜色-->
+    <input type="color" /><br/><br/>
+<!--复选框-->
+    <form>
+        音乐<input type="checkbox" value="1"/><br/><br/>
+        体育<input type="checkbox" value="2"/><br/><br/>
+        <button>提交</button>
+    </form>
+<!--单选框    name必须一样属于一个组    首选项-->
+    <input type="radio" name="music" checked  /><br/><br/>
+    <input type="radio" name="music"  /><br/><br/>
+<!--图片按钮-->
+    <h2>图片按钮</h2>
+            <input type="image" src="../images/tupian.jpg"/><br/><br/>
+    <!--url验证-->
+    <h2>url验证</h2>
+            <input type="url" ><br/><br/>
+    <h2>邮箱验证</h2>
+    <!--邮箱验证-->
+            <input type="email" ><br/><br/>
+    <h2>隐藏用法hidden</h2>
+    <!--邮箱验证-->
+    <input type="hidden" value="1" name="id" ><br/><br/>
+    <h2>提交文件</h2>
+    <!--邮箱验证          限制文件        必须提交一个否则无法验证-->
+    <input type="file" accept="text/css" readonly ><br/><br/>
+    <br/>
+<h1>下拉列表</h1>
+
+    <form action="https://www.baidu.com/">
+            <!--                     高10行   挂钩用  提交时的名字   多选  获取焦点    选择验证-->
+            <select name="fruit" id="" size="20" form="" name=""     multiple autofocus required>
+                <optgroup label="水果">
+                    <!--     首选项 -->
+                    <option selected value="1">苹果</option>
+                    <option value="2">香蕉</option>
+                    <option value="3">桔子</option>
+                    <option value="4">橙子</option>
+                </optgroup>
+                <optgroup  label="xxxx">
+                    <option value="1">aa</option>
+                    <option value="2">ss</option>
+                    <option value="3">sw</option>
+                    <option value="4">sq</option>
+                </optgroup>
+            </select>
+
+        <!--文本框-->
+        <h2>文本框</h2>
+        <!--                   30列     10行          把换行符提交 -->
+        <textarea name="content" cols="30" rows="10" wrap="hard"></textarea>
+        <button>提交</button>
+    </form>
+<br/><br/>
+<!--提示信息-->
+<h1>提示信息</h1>
+
+    <form action="">
+        <!--                  提示信息-->
+          <input type="text" required/>
+        <button>提交</button>
+    </form>
+<!--正则表达式-->
+
+    <form action="">
+        <!--                  提示信息-->
+        <input type="text" required placeholder="请输入座机号码" pattern="^[\d]{2,4}\-[\d]{6,8}$"/>
+        <button>提交</button>
+    </form>
+<br/><br/>
+<h1>html5的全局属性（无法显示的特殊字符）</h1>
+
+    &lt;我周边是特殊字符&gt;
+    空&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格
+   <h2 style="font-weight: bold; font-size: 100px"> &copy;</h2>版权
+    <!-- 点一下b光标就会出现-->
+    <input type="text" name="user" accesskey="b"/>
+<!--修改文字-->
+    <p contenteditable="true">修改文字</p>
+<!--文字在页面的位置-->
+    <p dir="rtl">文字在页面的位置</p>
+<!--文字隐藏-->
+    <p hidden>文字隐藏</p>
+<!--局部设置语言-->
+    <p lang="zh-cn">中文的html:5</p>
+<!--设置tab建 的切换光标-->
+    <input type="text"name="user1" tabindex="6" />
+    <input type="text"name="user2" tabindex="1" />
+    <input type="text"name="user3" tabindex="2" />
+    <input type="text"name="user4" tabindex="3" />
+<br/><br/>
+<!--                 小型大写                   回复正常值        倾斜-->
+    <p style="font-variant: small-caps ; font-variant: normal; font-style: italic;font-family:微软雅黑" >字体设置html 小型大写</p>
+
+    <p style="font-family: abc; font-size: 40px;">css3的字体调用</p>
+<!--上边有线-->
+    <p style="text-decoration: underline">css3的字体调用</p>
+<!--下边有线-->
+    <p style="text-decoration: overline">css3的字体调用</p>
+<!--中间有线                                      大写文字变小写-->
+    <p style="text-decoration: line-through;text-transform: lowercase">css3的字体调用</p>
+<!--去掉线                                      文字变大写-->
+    <a style="text-decoration: none; text-transform:uppercase ">css3的字体调用</a>
+<!--两端对齐-->
+    <p style="width: 500px; text-align: justify">两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐两端对齐 </p>
+<!--让英文字母断开-->
+    <p style="word-wrap: break-word">文本自定换行</p>
+<!--首行缩进-->
+    <p style="text-indent:2em">文本自定换行</p>
+<!--最小宽度，最大高度                                  清楚浮动          等比例缩放图片大小     背景固定                        图片渗透到 padding            图片渗透到padding的内容被裁减-->
+    <div style="min-width: 300px; max-height: 300px; clear: left; background-size:100% ; background-attachment:fixed; background-origin:padding-box;background-clip:padding-box   "></div>
+<br/><br/>
+    <table class="table" border="1">
+        <tr>
+            <!--                   底部对其-->
+            <th style="vertical-align: bottom">性别</th>
+<!--                                中间对其-->
+            <th style="vertical-align: middle">年龄</th>
+            <!--                 顶部对其-->
+            <th style="vertical-align: top">姓名</th>
+        </tr>
+        <tr>
+            <td>男</td>
+            <td>89</td>
+            <td>不知道</td>
+        </tr>
+    </table>
+<br/><br/>
+<!--              空心样式                 样式进入文本内容                             简写方式 -->
+    <ul style="list-style-type: circle;list-style-position:inside;list-style: circle inside url(images/li.jpg) ">
+        <!-- 在上面   -->
+        <li>圆形<b style="vertical-align:super ">2</b></li>
+        <!-- 在下面-->
+        <li>圆形<b style="vertical-align:sub ">2</b></li>
+        <li>圆形</li>
+        <li>圆形</li>
+        <li>圆形</li>
+    </ul>
+<br/><br/>
+<!--         让文字中间显示-->
+    <b  style="vertical-align:80px;">内容简介</b><textarea cols="30" rows="10"></textarea>
+
+<br/>
+    <div style=" width: 300px; height: 200px; background-image:linear-gradient(145deg,orange 30%,red 60% ,blue 90%) ">
+        <span>线性渐变</span>
+    </div>
+<div style=" width: 300px; height: 200px; background-image:radial-gradient(circle,blue,red) ">
+    <span>径向渐变</span>
+</div>
+<br/>
+                                                                    <!--  平移 x y            放大1.5倍    旋转45度        倾斜-->
+    <div style="width: 300px; height: 200px;background: pink;transform: translate(200px,300) scale(1.5) rotate(45deg) skew(45deg, 30deg)"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body>
+</html>

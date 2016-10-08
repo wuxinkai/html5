@@ -73,22 +73,17 @@
 </body>
 </html>
 <script type="text/javascript">
-
     var box = document.getElementById("box");
     var lubzi= box.getElementsByTagName("div");
-
-
     var ary = ["images/lun_03.png","images/lun_05.png","images/lun_07.png","images/lun_09.png","images/lun_11.png","images/lun_13.png","images/lun_16.png"];
     function bindEvent() {
         var btnList = document.getElementsByTagName("input");
         for (var i = 0; i < btnList.length; i++) {
             btnList[i].colore = i;
             btnList[i].onclick = function () {
-
                 for(var i=0;i<lubzi.length;i++){
                     lubzi[i].style.backgroundImage = "url("+ ary[this.colore]+")";
                     lubzi[i].style.backgroundSize="cover" ;
-
                 }
 
             }
