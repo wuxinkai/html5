@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>选择颜色</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/city.css">
+    <script type="text/javascript" src="../js/iscroll.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="public-header public-header2">
+    <i class="ion-chevron-left"></i>
+    <span class="total">共<span>6005</span>张图</span>
+    <ul>
+        <li><a href="javascript:;"><img src="../imgs/carbanner.png" alt=""></a></li>
+    </ul>
+    <div class="public-footer">
+        <ul>
+            <li><a href="javascript:;">外观</a></li>
+            <li><a href="javascript:;">内饰</a></li>
+            <li><a href="javascript:;">中控</a></li>
+        </ul>
+    </div>
+</div>
+<div class="offer">
+   <div class="item-line">
+       <h3>奥迪A4L</h3>
+       <p><i class="offer-title">指导价: </i><span class="offer-con">116.00-332.79万</span></p>
+   </div>
+    <div class="item-line">
+        <h3>奥迪A4L</h3>
+        <p><i class="offer-title">指导价: </i><span class="offer-default">暂无报价</span></p>
+    </div>
+
+    <div class="spot">
+        <div class="spotIn">
+            <h4>亮点配置</h4>
+            <span>参数配置 ></span>
+        </div>
+        <div class="spotBtn">
+            <a href="javasctipt:;">七档双离合</a>
+            <a href="javasctipt:;">前置驱动</a>
+        </div>
+    </div>
+    <div class="spot">
+        <div class="spotIn">
+            <h4>亮点配置</h4>
+            <span>参数配置 ></span>
+        </div>
+        <div class="spotBtn">
+           <i>暂无数据</i>
+        </div>
+    </div>
+
+</div>
+<div class="year">
+    <div class="yearLeft">
+        <a href="javascript:;">全部在售</a>
+    </div>
+    <div class="yearRight"  id="wrapper">
+        <div id="scroller">
+            <ul>
+                <li><a href="javascript:;">2017款</a></li>
+                <li><a href="javascript:;">2016款</a></li>
+                <li><a href="javascript:;">2015款</a></li>
+                <li><a href="javascript:;">2014款</a></li>
+                <li><a href="javascript:;">2013款</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div>
+    <div class="design-grid">
+        <div class="title">
+            1.4L/110w 涡轮增压
+        </div>
+        <div class="design">
+            <ul>
+                <li>
+                    <h3>2017款30TFSI<i>补贴</i></h3>
+                    <div class="designIn">
+                        <div class="design-left">
+                            <p class="design-p"><i>指导价</i><span>116万</span></p>
+                            <p class="design-top"><span class="design-price">95.56万起</span></p>
+                        </div>
+                        <div class="design-right">
+                            <a class="design-info" href="javascrip:;">询底价</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <h3>2017款30TFSI<i>补贴</i></h3>
+                    <div class="designIn">
+                        <div class="design-left">
+                            <p class="design-p design-height"><i>指导价</i><span>116万</span></p>
+                        </div>
+                        <div class="design-right">
+                            <a class="design-default" href="javascrip:;">询底价</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var oParent=document.getElementById('scroller');
+    var aChil=oParent.getElementsByTagName('li');
+    oParent.style.width=aChil.length*6+'rem';
+    var myScroll = new IScroll('#wrapper', {
+        disableMouse: true,
+        disablePointer: true,
+        scrollX : true,
+        scrollY : false,
+    });
+</script>

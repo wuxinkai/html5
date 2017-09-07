@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>询低价</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/city.css">
+    <script type="text/javascript" src="../js/bscroll.min.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+
+</head>
+<body>
+<!--头部-->
+<div class="public-header">
+    <i class="ion-chevron-left"></i>
+    <span class="titles">询低价</span>
+</div>
+<!--内容部分-->
+<div class="scroll-outer top1rem">
+    <div class="scroll-inner car-list">
+        <div class="car-prompt car-promptIn">
+            <span class="item-line">填写姓名和手机号即可获得由商家回复的车辆低价，我们不会泄露您的个人信息</span>
+        </div>
+        <ul class="product-info ">
+            <li >
+                <div class="item-line">
+                    <a href="" class="image">
+                        <img src="../imgs/car.png" alt="">
+                    </a>
+                    <div class="info info-title">
+                        <p>
+                            <span>2017款</span>
+                            <span>30 TFSI</span>
+                            <span>时尚型</span>
+                            <span>手动</span>
+                            <span>舒适版</span>
+                        </p>
+                        <span class="vender">向北京奥通奥迪询低价</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="car-prompt car-promptIn">
+           <div class="item-line">
+               <label >
+                   <span class="input-label">姓名</span>
+                   <input class="input-con" type="text" placeholder="请输入2~8个汉字">
+               </label>
+           </div>
+           <div>
+                <label >
+                    <span class="input-label">手机号</span>
+                    <input class="input-con" type="text" placeholder="请输入11位手机号码">
+                </label>
+           </div>
+        </div>
+        <div class="checkbox-list ">
+           <div class="checkbox-title">请选择经销商(最多5家)</div>
+           <div class="checkbox-content">
+                <div class="checkbox-contentIn item-line ">
+                    <div class="checkbox-left">
+                        <div class="checkbox-icon">
+                            <input type="checkbox" id="female"/>
+                        </div>
+                    </div>
+                    <div class="checkbox-right">
+                        <label for="female">
+                            <p class="female-title"><span class="red">4s-</span><span>北京通合别墅</span></p>
+                            <p class="female-content">点击询价即视为同意</p>
+                            <p class="female-price">96.00万</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="checkbox-contentIn item-line ">
+                    <div class="checkbox-left">
+                        <div class="checkbox-icon">
+                            <input type="checkbox" id="female1"/>
+                        </div>
+                    </div>
+                    <div class="checkbox-right">
+                        <label for="female1">
+                            <p class="female-title"><span class="red">4s-</span><span>北京通合别墅</span></p>
+                            <p class="female-content">点击询价即视为同意</p>
+                            <p class="female-price">96.00万</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="checkbox-contentIn item-line ">
+                   <div class="checkbox-left">
+                       <div class="checkbox-icon">
+                           <input type="checkbox" id="female3"/>
+                       </div>
+                   </div>
+                   <div class="checkbox-right">
+                       <label for="female3">
+                           <p class="female-title"><span class="red">4s-</span><span>北京通合别墅</span></p>
+                           <p class="female-content">点击询价即视为同意</p>
+                           <p class="female-price">96.00万</p>
+                       </label>
+                   </div>
+               </div>
+                <div class="checkbox-contentIn item-line ">
+                   <div class="checkbox-left">
+                       <div class="checkbox-icon">
+                           <input type="checkbox" id="female4"/>
+                       </div>
+                   </div>
+                   <div class="checkbox-right">
+                       <label for="female4">
+                           <p class="female-title"><span class="red">4s-</span><span>北京通合别墅</span></p>
+                           <p class="female-content">点击询价即视为同意</p>
+                           <p class="female-price">96.00万</p>
+                       </label>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="car-prompt">
+            <span class="rules">点击询价即视为同意《<a href="javascript:;">个人信息保护声明</a>》</span>
+        </div>
+    </div>
+</div>
+<div class="foot-btn">
+    <a href="javascript:;">立即询价</a>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    $('.checkbox-contentIn ').bind("touchend",function(){
+        $(this).addClass("checkboxBox").siblings().removeClass("checkboxBox")
+    });
+
+</script>

@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,li,input,p,dl,dt,dd,table,form,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+body{background:#fff;   font-family:"PingFang SC","sans-serif","Microsoft YaHei"; }
+body,html{font-size:62.5%; }
+a{color:#000;}
+a,a:hover{text-decoration:none;}
+em,i,city{font-style:normal;}
+img{border:none;}
+.l{float:left;}
+.r{float:right;}
+ul,ol,li{list-style-type:none; padding:0; margin: 0;}
+.clear:after,
+.area:after{content:".";visibility:hidden;height:0;display:block;clear:both;}
+.clear, .area{zoom:1;}
+.white{background: #fff}
+.public-header{position: fixed !important;z-index: 9999 !important;width: 100%;top: 0}
+.public-header i{width: 1.2rem;height: 2.0rem;top: 18px;background: url("../imgs/back.png") no-repeat;background-size: 100%;position: absolute;left: 20px;}
+.public-header,.locations{  height: 55px;background: #fff;text-align:center;line-height: 55px;font-size: 1.8rem;  }
+.public-header .titles{font-weight: bold}
+.public-header .active{border-bottom: 2px solid #007aff;padding-bottom: 10px}
+.locations{text-align: left;margin-top: 55px;position: relative;z-index: 10}
+.locations  b{font-weight: normal}
+.locations  span{font-size: 1.6rem;color: #a1a2a4}
+.line{height: 10px;background: #f5f5f5; }
+.locations i{background: url("../imgs/locations.png") no-repeat;background-size: 100%;width: 24px;height: 24px;display: block;float:left;margin: 15px 15px 0;}
+.item-line{border-bottom: 1px solid #dddee3}
+.item-line .carbg{width: 2rem;height: 2rem;border-radius: 50%;float: left;margin-top: 1.2rem;margin-right: 1rem}
+.scroll-outer{position: relative;top: 55px;overflow: hidden}
+.scroll-bg{position: fixed;height: 100%;width: 100%;}
+.scroll-bg img{width: 14rem;height: 14rem;display: block;position: absolute;left:50%; margin: 40% 0 0 -7rem }
+.city .city-top{bottom: inherit;top:0px;position:inherit}
+.item-line .black{background: black;border: 1px solid #000}
+.item-line .white{background: #f0f0f0;border: 1px solid #dddde5}
+.item-line .blue{background: #1650be;border: 1px solid #1650be}
+.product-info{background: #fff}
+.product-info li{padding-left:16px;overflow: hidden}
+.item-line .beige{background: url("../imgs/beige.png")center no-repeat;}
+.product-info li .image{ width: 8rem;  border: 1px solid #e0e0e0;  display: block;  float: left;  margin-right: 10px;}
+.product-info li .info{float: left}
+.product-info li .info .names,.info-list .list-top{font-size:1.8rem;  line-height: 3rem;  height: 3rem;}
+.product-info li .info i{padding: .2rem .4rem;border-radius: 2px;margin-left: .2rem}
+.product-info li .info .mack01{background: #007aff;color: #fff}
+.product-info li .info .mack02{background: #ffb33d;color: #fff}
+.product-info li .info .mack03{background: #dedee6;color: #fff}
+.product-info li .image img ,.etron-car dl img{  width: 100%;  vertical-align: middle;  border: 0;  }
+.product-info li .info .info-bom{margin-bottom: 10px;}
+.product-info li .item-line{overflow: hidden;padding: 1rem 0}
+.info-list,.info-title{width: 64%}
+.info-title{font-size: 1.8rem}
+.info .texts{color:#e55e58;font-size: 1.4rem}
+.list-bom{margin-top: 1.2rem}
+.info-p span{font-weight: bold}
+.list-bom span.sized,.info-title .vender{float: left;font-size: 1.4rem;color: #9fa4ac;;margin-top:4px}
+.list-bom span.list-price{float: right;font-size: 1.8rem;}
+.brand{background: #fff;height: 4rem;line-height: 4rem;padding-left: 16px}
+.brand a{width: 4rem;display: block;  float: left;  margin-right: 10px;}
+.brand a img,.car-model li img{ width: 100%;  vertical-align: middle;  border: 0;}
+.brand .names{font-size: 1.6rem}
+.titles-right{float: right; color: #007aff;font-size: 1.6rem;padding-right: 16px;}
+.car-model{padding-left:6px;overflow: hidden }
+.car-model li{width: 30%;float: left;margin: 1rem 1.4% 0}
+.car-prompt{padding-left: 16px;}
+.car-prompt span,.car-prompt a{color: #9fa4ac;display: inline-block;font-size: 1.4rem;padding: .8rem 0}
+.car-prompt a{text-decoration:underline }
+.car-promptIn{background: #fff}
+.brand-line{border-bottom: 1px solid #b2b2b2;height: 4rem;line-height: 4rem;background: #fff;white-space:nowrap}
+.car-grid,.car-price{background: #fff}
+.brand-line li {float: left;width: 25%;text-align: center}
+.brand-line li.active a{border-bottom: 2px solid #007aff}
+.brand-line li a{font-size: 1.6rem;padding-bottom: 10px}
+.header-line{border-bottom: 1px solid #b2b2b2}
+.car-price .title{font-size: 1.6rem;color: #9fa3ac;padding-left: 1rem;height: 4rem;line-height: 4rem}
+.price-btn{overflow: hidden;padding: 0 2%;}
+.price-btn li{float: left;text-align: center;margin: 0 2% 1rem }
+.price-btn-w21 li{width: 21%;}
+.price-btn li a{display: block;overflow: hidden;white-space: nowrap;color: #757575;font-size: 1.4rem;padding: .8rem 0}
+.price-btn-w21 li:last-child{width: 46%;}
+.price-btn-w21 li a{background: #eff0f4;border-radius: 4px;border:1px solid #eff0f4;}
+.price-car li a{background: #ffffff;border-radius: 4px;border:1px solid #dcdee4;padding: .8rem 1.4rem}
+.price-btn li.active a{background: #fff;border-color: #007aff;color: #0f83fe}
+.price-btn-w30 li{width: 29.2%;}
+.price-btn-model li{display: block;;height: 5rem;margin-bottom: 2rem}
+.price-btn-model li span{ display: block ;margin: 4rem auto 0;font-size: 1.4rem;color: #333333  }
+.price-btn-model li.car0{background: url("../imgs/car0A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car1{background: url("../imgs/car1A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car2{background: url("../imgs/car2A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car3{background: url("../imgs/car3A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car4{background: url("../imgs/car4A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car5{background: url("../imgs/car5A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car6{background: url("../imgs/car6A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car7{background: url("../imgs/car7A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car8{background: url("../imgs/car8A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car9{background: url("../imgs/car9A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car10{background: url("../imgs/car10A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car11{background: url("../imgs/car11A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.car12{background: url("../imgs/car12A.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car0{background: url("../imgs/car0.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car1{background: url("../imgs/car1.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car2{background: url("../imgs/car2.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car3{background: url("../imgs/car3.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car4{background: url("../imgs/car4.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car5{background: url("../imgs/car5.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car6{background: url("../imgs/car6.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car7{background: url("../imgs/car7.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car8{background: url("../imgs/car8.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car9{background: url("../imgs/car9.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car10{background: url("../imgs/car10.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car11{background: url("../imgs/car11.png") no-repeat;background-size: 100%; }
+.price-btn-model li.active.car12{background: url("../imgs/car12.png") no-repeat;background-size: 100%; }
+/*banner*/
+/*新内容*/
+.public-header2{height: 21rem;background: #ccc;line-height: normal;position: relative;overflow: hidden}
+.public-header2 ul li a{display: block}
+.public-header2 ul li a img{width: 100%;  vertical-align: middle;  border: 0;}
+.public-header2 .total{position: absolute;bottom:4rem ;right: 1rem;  background: rgba(0, 0, 0, 0.5);  color: #fff;  padding: 5px;  border-radius: 2px;  font-size: 1.2rem}
+.public-footer{height: 3rem;line-height: 3rem;background: rgba(0, 0, 0,.5);position: absolute;bottom: 0;z-index: 10;width: 100%}
+.public-footer ul li{float: left;width: 33%;text-align: center;}
+.public-footer ul li a{color: #fff;font-size: 1.4rem}
+.public-footer ul li:nth-child(even){border-left: 1px solid rgba(255, 255, 255,.5);border-right: 1px solid rgba(255, 255, 255,.5);}
+.offer{padding-left: 16px;background: #fff}
+.offer h3{height: 3.4rem;line-height: 4rem;font-size: 1.8rem;font-weight: bold;}
+.offer .offer-title{color: #a1a4ad;font-size: 1.4rem}
+.offer .offer-con{color: #fd4d4d;font-size: 1.8rem}
+.offer .offer-default{color: #9fa4ac;font-size: 1.6rem}
+.offer p{height: 3rem;line-height: 2rem;}
+.spot .spotIn{height: 4rem;line-height: 4rem;}
+.spot h4{float: left;font-size: 1.6rem;}
+.spot span{float: right;color: #9fa3ac;font-size: 1.4rem;padding-right: 1rem}
+.spotBtn{height: 4rem}
+.spotBtn a{padding: .6rem 1rem;border: 1px solid #0079ff;border-radius: 4px;display: block;float: left;color: #0079ff;margin-right: 1rem;font-size: 1.6rem}
+.spotBtn i{color: #9fa3ac;font-size: 1.4rem}
+.year{height: 4rem;line-height: 4rem;margin-top: .5rem;background: #fff;}
+.yearLeft{width: 20%;float: left;text-align: center;font-size: 1.6rem;margin-left: 3%}
+.yearRight{width: 77%;float: left;position: relative;overflow: hidden;height: 4rem;}
+#scroller{overflow: hidden;position: absolute}
+.yearRight ul{white-space:nowrap;overflow: hidden ;  }
+.yearRight ul li{float: left;width: 6rem;text-align: center}
+.yearRight ul li a{font-size: 1.6rem}
+.design{background: #fff;padding-left: 16px;padding-bottom: 1rem}
+.design-grid .title{    height: 32px;  padding-left: 16px;  line-height: 32px;  background-color: #f5f5f5;  font-size: 1.4rem;  color: #747577;}
+.design ul li h3{font-size: 1.8rem;color: #212121;height: 4rem;line-height: 4rem;font-weight: normal}
+.design ul li h3 i{background: #fd4d4d;font-size: 1.4rem;color: #fff; padding: .2rem .4rem;  border-radius: 2px;  margin-left: 1rem; }
+.design ul li{padding-bottom: 1rem;border-bottom: 1px solid #dddee3}
+.designIn{overflow: hidden;}
+.design-left{float: left;}
+.design-left .design-p{ color: #a1a4ad;  font-size: 1.4rem;}
+.design-left .design-price{ color: #ff4d4d;  font-size: 1.8rem;}
+.design-left .design-height{margin-top: 2.4rem;}
+.design-right{float: right;padding-right: 16px}
+.design-top{height:2.6rem;line-height: 2.6rem}
+.design-right a{padding: .6rem 5rem;display: block;font-size: 1.8rem;border-radius: 6px}
+.design-right .design-info{color: #007aff;background: #f5fafe;border: 1px solid #007aff}
+.design-right .design-default{color: #fff;background: #eff0f3;border: 1px solid #eff0f3}
+.titles-left{float: left;width: 15%}
+.titles-cancel{float: right;width: 15%}
+.select-search{float: left;display: block;height: 40px;border-radius: 20px;background: #f3f4f6;text-align: center;border: none;margin-top: .6rem;width: 66%;margin-left: 1.4rem;}
+.select-searchIn{color: #212121;float: left;display: block;height: 40px;border-radius: 20px;background: #f3f4f6;text-align: left;border: none;margin-top: .6rem;width: 76%;margin-left: 1.4rem;padding-left: 1rem}
+.select-icon{float: right;display: block;width: 2.6rem;margin: 1rem 1rem 0 0}
+/*etron*/
+.etron{background: #fff;}
+.etron .title{padding-left: 16px;height: 4rem;line-height: 4rem;}
+.etron .title span{font-size: 1.8rem;display: block;float: left;margin-left: 10px;font-weight: bold}
+.etron .title i{display: block;float: left;width: 1.6rem;height: 2rem; vertical-align: middle;  border: 0;}
+.etron .title i.flame{background: url("../imgs/flame.png") no-repeat;background-size: 100%;margin-top: 1rem;}
+.etron .title i.trophy{background: url("../imgs/trophy.png") no-repeat;background-size: 100%; margin-top: 1.2rem;}
+.etron-btn .etron-btnIn{border: 1px solid #e7e6ee;overflow: hidden;height: 3rem;width: 84%; margin: 0 auto;border-radius: 20px}
+.etron-btnIn a{float: left;display: block;width: 33.3%;text-align: center;border-radius: 20px;height: 3rem;line-height: 3rem}
+.etron-btnIn a.active{background: #007aff;font-size: 1.8rem;color: #fff}
+.etron-car{overflow: hidden;background: #fff;}
+.etron-car dl {float: left;overflow: hidden;padding-left: 16px;padding-bottom: 1rem}
+.car-XM dl dt img{width: 9rem;height: 8rem;}
+.car-XM{margin-top: 2rem;height: 160px;overflow: hidden;width: 100%;position: relative}
+.scrollerIn{position: absolute;}
+.car-logos{margin-top: 0rem;}
+.etron-car dl dd.name{text-align: center;font-size: 1.8rem;margin-top: 10px;margin-bottom: 4px;}
+.etron-car dl dd.text{color: #f25858;font-size: 1.4rem}
+.car-logos dl dt img{width: 4.5rem;height:4rem;}
+.car-logos dl dd.name{font-size: 1.6rem;}
+.logos{width: 3rem;display: block;margin-top: 12px;}
+.item-logo span{width: 85%; position: inherit;float: left}
+.logos-grid {width: 12%;float: left;}
+.contrast{overflow: hidden;background: #fff;position: relative;top: 55px;}
+.contrast .contrast-left{width:27%;float: left;background: #fff;position: relative;z-index: 100}
+.contrast-left ul li,.contrast-right ul li{;height: 5rem;padding: 0 .5rem;font-size: 1.4rem;border:1px solid #dddee3;margin-left: -1px;margin-top: -1px; text-align: center;line-height: 5rem }
+.contrast-left ul li.contrast-first,.contrast-right ul li.contrast-first{height: 8rem;line-height: 8rem;}
+.contrast-first{margin-bottom: 3.1rem}
+.contrast-right ul li.contrast-first{line-height: normal}
+.contrast-left ul li.contrast-length,.contrast-right ul li.contrast-length{text-align: left;line-height: normal;}
+.contrast-left ul li.contrast-length span,.contrast-right ul li.contrast-length span{margin-top: 1rem;display: block;margin-left: 5px}
+.contrast .contrast-right{width:73%;float: left;}
+.contrast-left ul li.contrast-second{height: 3rem;line-height: 3rem;background: #eff0f4;width: 370%;position: absolute;top: 8.1rem ;z-index: 1000;color: #757575}
+.contrast-scroll{position: absolute;}
+.contrast-second span{display: block;float: left}
+.contrast-second .macks{float: right;margin-right: 1rem;}
+.contrast-second .macks li{float: left;height: 3rem;line-height: 3rem;border: none;}
+.contrast-second .macks li i{border-radius: 50%;display: inline-block;margin-right: 5px}
+.contrast-second .macks li:nth-child(1) i{width: 10px;height: 10px;background: #757575;}
+.contrast-second .macks li:nth-child(2) i{width: 9px;height: 9px;border: 1px solid #757575}
+.contrast-second .macks li:nth-child(3) i{font-weight: bold}
+.contrast-rightIn{width: 100px;float: left}
+.contrast-right .contrast-rightIn ul li{text-align: left;}
+.contrast-ul li{white-space:nowrap; overflow: hidden;}
+.contrast-ul li.contrast-first span{margin-top: 1.4rem;display: block;color: #000000}
+.contrast-ul li.contrast-first p{font-size: 1.4rem;margin-top: 1.4rem;}
+.red{color: #fd4d4f;}
+.contrast-first{position: relative}
+.icon-close{width: 1.6rem;height:  1.6rem;display: block;position: absolute;right:0px;cursor: pointer}
+.scroller-color,.scroller-parameter ul li{height: 55px;padding: 0 16px;line-height: 55px;font-size: 1.6rem;background: #fff;}
+.scroller-color ul li.item-line{border: none;float: left}
+.scroller-parameter ul li span{  font-size: 1.6rem;  color: #212121;}
+.scroller-parameter ul li i{float: right;  font-size: 1.6rem;  }
+.city-wrapper .scroller-hook .title-history{background-color: #fff}
+.title-history span{float: left;font-size: 1.4rem}
+.title-history a{float: right;padding-right: 16px;color: #007aff;font-size: 1.4rem}
+.car-promptIn .input-label{padding: 0;   height:3.6rem ;  line-height: 3.6rem;  width: 20%;  color: #212121;  font-size: 1.8rem;  }
+.input-con {color: #9fa4ac;  height:3.6rem ;  line-height: 3.6rem;  font-size: 1.6rem;  width: 75%;  border: none;}
+.input-con:focus{color: #212121}
+.top1rem{margin-top: 1rem}
+.foot-btn {position: fixed;bottom: 0;width: 100%;}
+.foot-btn a{display: block;text-align: center;height: 4rem;line-height: 4rem;background: #a6ccf6;color: #fff;font-size: 1.6rem}
+.checkbox-list {background: #fff;padding-left: 16px;overflow: hidden;margin-top: 1rem}
+.checkbox-title{color: #9fa4ac;   font-size: 1.4rem;height: 3rem;line-height: 3rem}
+.checkbox-left{float: left;width: 14%;}
+.checkbox-right{float: left;width: 85%;}
+.female-title{font-size: 1.6rem;color: #212121;line-height: 2.4rem}
+.female-content{font-size: 1.4rem;color: #9fa4ac;height: 2rem}
+.female-price{font-size: 1.6rem;color: #fd4d4d;line-height:2.6rem}
+.checkbox-contentIn{overflow: hidden;padding: 1rem 0}
+.checkbox-left .checkbox-icon,.checkbox-left [type="checkbox"]{margin: 2.6rem auto 0;width: 2rem;height: 2rem;display: block;background: url("../imgs/checkbox.png") no-repeat;background-size: 96%}
+.checkbox-left [type="checkbox"]{opacity: 0;}
+.checkboxBox .checkbox-icon{margin: 2.6rem auto 0;width: 2rem;height: 2rem;display: block;background: url("../imgs/checkbox2.png") no-repeat;background-size: 96%}
+.info-title .not{float: left}
+.through .vender{margin-top: 7px;}
+.speed{background: #fff;overflow: hidden}
+.speed-left{margin-left: 16px;float: left;width: 80%;margin-top: .5rem;height: 4rem;background: url("../imgs/separate.png") center right no-repeat;background-size: contain}
+.speed-right{float: right;width: 15%;height: 5rem;}
+.speed-bg{background: url("../imgs/separate1.png") center no-repeat;background-size: 70%}
+.speed-left li{float: left;width: 50%;height: 2rem;line-height:  2rem}
+.speed-left li .header{color: #9fa4ac;font-size: 1.4rem}
+.speed-left li .content{color: #212121;font-size: 1.4rem}
+.dealer{height: 3rem;line-height: 3rem;}
+.dealer{margin-top: 1rem;background: #fff;overflow: hidden;height: 4rem;line-height: 4rem;padding-left: 16px}
+.dealer-left{font-size: 1.6rem;float: left}
+.dealer-right{width: 6rem;background: url("../imgs/separate2.png") left 1.2rem no-repeat;background-size: 30%;float: right;height: 4rem;font-size: 1.6rem;}
+.dealer-right span{margin-left: 22px;color: #007aff}
+.dealer-bg img {margin: 25% 0 0 -7rem;}
+.business{padding-left: 16px;background: #fff;overflow: hidden}
+.businessIn{overflow: hidden}
+.business-btn{margin: 1.2rem 0}
+.business .position{float: left;height: 3rem;line-height: 3rem;font-size: 1.6rem;margin-top: .6rem}
+.position b{font-weight: normal}
+.business .unit{float: right;font-size: 1.6rem;line-height: 3rem;margin-top: .6rem;margin-right: 16px;}
+.address span{font-size: 14px;color: #9fa4ac;display: block;margin-right: 16px;}
+.business-grid{height: 3.4rem;line-height: 3.4rem;margin-right: 16px;border: 1px solid #007aff;border-radius:6px;font-size: 1.4rem;color: #007aff}
+.business-grid a{color: #007aff;display:block;float: left;width: 40%;text-align: center;border-left: 1px solid #007aff;margin-left: -2px;background: #f5faff;border-radius: 0 6px  6px 0}
+.business-grid .business-tel{float: left;width: 60%;text-align: center}
+#fixeds{position:fixed}
+

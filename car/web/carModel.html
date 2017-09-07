@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>图片展示</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/city.css">
+    <script type="text/javascript" src="../js/bscroll.min.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="public-header ">
+    <i class="ion-chevron-left"></i>
+    <span class="titles ">看车</span>
+    <span class="titles titles-right">颜色</span>
+</div>
+<!--内容部分-->
+<div class="scroll-outer">
+    <div class="scroll-inner car-list">
+        <div class="brand-line">
+            <ul>
+                <li class="active"><a href="javascript:;">外观</a></li>
+                <li><a href="javascript:;">中控</a></li>
+                <li><a href="javascript:;">座椅</a></li>
+                <li><a href="javascript:;">细节</a></li>
+            </ul>
+        </div>
+        <div class="car-grid">
+            <ul class="car-model">
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+                <li><img src="../imgs/car.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    //滚动条
+    //    var cityWrapper = document.querySelector('.scroll-inner');
+    //    var scroll;
+    //    scroll = new window.BScroll(cityWrapper, {
+    //        probeType: 3
+    //    });
+    //    // scroll.on('scroll', function (pos) {
+    //    //   console.log(Math.round(pos.y));
+    //    // });
+    //    scroll.scrollTo(0, 0);
+
+    $('.brand-line ul  li').bind("touchend",function(){
+        $(this).addClass("active").siblings().removeClass("active")
+    });
+</script>

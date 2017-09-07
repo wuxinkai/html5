@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>选择颜色</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/city.css">
+    <script type="text/javascript" src="../js/bscroll.min.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/city.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="public-header">
+    <i class="ion-chevron-left"></i>
+    <span class="titles">参数配置</span>
+</div>
+<!--内容部分-->
+<div class="scroll-outer">
+    <!--有数据-->
+    <div  class="scroll-inner">
+        <div class="public-content">
+            <div class="city">
+                <div class="city-wrapper city-top">
+                    <div class="scroller-hook">
+                        <div class="title">参数配置</div>
+                       <div class="scroller-color">
+                            <ul>
+                                <li class="item item-line"><i class="carbg black"></i></li>
+                                <li class="item item-line"><i class="carbg black"></i></li>
+                                <li class="item item-line"><i class="carbg black"></i></li>
+                                <li class="item item-line"><i class="carbg black"></i></li>
+                                <li class="item item-line"><i class="carbg black"></i></li>
+                            </ul>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="public-content">
+            <div class="city">
+                <div class="city-wrapper city-top">
+                    <div class="scroller-hook">
+                        <div class="title">基本参数</div>
+                        <div class="scroller-parameter">
+                            <ul>
+                                <li class="item-line">
+                                    <span>参考价</span>
+                                    <i class="red">10.26万</i>
+                                </li>
+                                <li class="item-line">
+                                    <span>厂商</span>
+                                    <i>吉利</i>
+                                </li>
+                                <li class="item-line">
+                                    <span>变速箱</span>
+                                    <i>吉利</i>
+                                </li>
+                                <li class="item-line">
+                                    <span>车身结构</span>
+                                    <i>吉利</i>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--没有数据-->
+    <div class="scroll-inner scroll-bg">
+        <img src="../imgs/No.png" alt="">
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    var cities = document.querySelector('.cities-hook');
+    var cityData=[
+        {
+            class:'black',
+            name:'黑色'
+        },
+        {
+            class:'white',
+            name:'珍珠白'
+        }
+    ];
+    function initCities() {
+        var lists = '';
+        lists += '<ul >';
+        cityData.forEach(function (group, index) {
+            lists += '<li class="item item-line" data-name="' +group.name + '"><i class="carbg '+group.class+'"></i><span class="border-1px ">' + group.name + '</span></li>';
+
+        });
+        lists += '</ul>';
+        cities.innerHTML = lists;
+    }
+    initCities()
+
+
+    var cities2 = document.querySelector('.cities-hook2');
+    var cityData2=[
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        },
+        {
+            class:'blue',
+            name:'炫蓝色'
+        },
+        {
+            class:'beige',
+            name:'黑色/米色'
+        }
+    ];
+    function initCities2() {
+        var lists = '';
+        lists += '<ul >';
+        cityData2.forEach(function (group, index) {
+            lists += '<li class="item item-line" data-name="' +group.name + '"><i class="carbg '+group.class+'"></i><span class="border-1px ">' + group.name + '</span></li>';
+
+        });
+        lists += '</ul>';
+        cities2.innerHTML = lists;
+    }
+    initCities2()
+
+
+
+
+</script>
