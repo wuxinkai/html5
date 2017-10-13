@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>指导语</title>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/zhidaoyu.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body >
+	
+	<div class="zhidaoyu-detail">
+		<div class="title">京津冀地区人群情绪状态调查</div>
+		<div class="jingyu">尊敬的女士/先生：</div>
+		<div class="p1">您好！我们是北京医学会抑郁障碍分会，为了能让身边更多可能存在抑郁情绪的人得到专业帮助，特此开展情绪状态的调查。</div>
+		<div class="p1"><span>本调查不记名，不涉隐私，耗时5-10分钟。</span>询问您过去两周的情绪状态，您只需客观点选相关选项，完成所有题目后，系统会自动对您的情绪状态量化评估，并给出相应的专业建议和就诊指引。</div>
+		<div class="p1">所有筛查结束后，我们会将大数据统计结果公之于众，再次感谢您的参与！</div>
+	</div>
+	
+	<div class="download-detail">
+		<div>
+			<img src="images/btn-sucess.png" width="243.5">
+		</div>
+		
+	</div>
+	
+</body>
+<script>
+	
+	$(function(){
+		$("body").css("background-size", window.screen.width*370/375+"px auto")
+		$(".download-detail>div>img").attr("width", window.screen.width*243.5/375)
+		$(".zhidaoyu-detail>img").attr("width", window.screen.width*330/375)
+	})
+	
+	/**
+	 * 弹窗
+	 */
+	function download(){
+		$(".download-detail").css("display", "block")
+		$("body").css("position", "fixed")
+	}
+	
+	/**
+	 * 关闭弹窗
+	 */
+	function closeDownload(){
+		$("body").css("position", "relative")
+		$(".download-detail").css("display", "none")
+	}
+</script>
+</html>

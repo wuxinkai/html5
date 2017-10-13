@@ -1,0 +1,88 @@
+html{
+    font-size:62.5%;
+    background: #f2f2f2;
+}
+div {
+    /*关键代码*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body{ background: #f2f2f2;}
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {margin:0;padding:0;-webkit-text-size-adjust: none}
+h1, h2, h3, h4, h5, h6{font-size:1.27rem;font-weight:normal}
+a img {border:0}
+ul, ol, li {list-style-type:none;vertical-align:0}
+a {outline-style:none;color:#535353;text-decoration:none}
+a:hover { color: #D40000; text-decoration: none}
+.slider{display: none;}/*用于获取更加体验*/
+.focus span{width:1.0rem;height:1.0rem;margin-right:1.0rem;border-radius:50%;background:#666;font-size:0; }
+
+.public-header{  position: fixed !important;  z-index: 9999 !important;  width: 100%;  top: 0;  background: #3c3c40;  color: #fff;  text-align: center;  height: 55px;  line-height: 55px;  }
+.return{font-size: 1.6rem;}
+.return-right{position: absolute;right: 15px;top: 0}
+.return-left{position: absolute; left: 15px;top: 0;}
+.return-left span{font-size: 1.6rem}
+.return-left .return-close{margin-left: 1rem}
+.return i{font-size:2.4rem;top: 5px;}
+.public-outer{position: relative;  top: 10px;   }
+.public-title{font-size: 1.8rem;line-height: 55px;}
+.next-btn{text-align: center;color: #fff;height: 4.5rem;line-height:4.5rem;background: #eeaa3d;border-radius: 5rem;width: 25.7rem; margin: 1rem auto;font-size: 1.8rem; }
+
+.pull-right select{
+	border: none;
+    font-size: 1.6rem;
+    color: #a6a6a6;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    direction: rtl;
+    background: transparent;
+    line-height: 2rem;
+}
+.pull-right select.active{
+	color: rgb(255,200,65);
+}
+
+.personal-info,.identity{padding: 0 1.5rem}
+.personal-info ul li,.identity-title{margin-top: 1.3rem;height: 4.4rem;line-height: 4.4rem;background: #fff;padding: 0 1.5rem;border-radius: .6rem;}
+.personal-info ul li .personal-attr{font-size: 1.6rem;color: #333333}
+.personal-info ul li .personal-val{font-size: 1.6rem;color: #a6a6a6}
+.personal-info ul li .glyphicon-menu-right{color: #bfbfbf;font-size: 2.0rem;top: 4px}
+.yellow{color: rgb(255,200,65) !important;}
+.identityIn{ background: #fff ;border-radius: .6rem;margin-top: 1.3rem; }
+.identity-title{margin-top: 0;font-size: 1.6rem;color: #333}
+.identity-content{padding-left: 4.2rem;padding-right: 2.4rem}
+.identity-content li{overflow: hidden;height: 4rem;line-height:4rem}
+.identity-attr{font-size: 1.5rem;color: #666666}
+.identity-val{font-size: 1.4rem;}
+
+.step{height: 6.6rem;overflow: hidden;}
+.stepIn{width: 25.9rem;height: 4rem;background: url("../images/step1.png") no-repeat; background-size: 100%; margin: 1.5rem auto 0}
+.prompt {background: #e3e3e3;border-radius: 5px;padding: .6rem 1.2rem;margin:0 15px;}
+.prompt span{font-size: 1.3rem}
+.select-grid{margin:0 15px }
+.radio-text{margin-left: 1.2rem}
+.radio-text2{margin-left: .6rem}
+.select-grid ul li{border-radius: 5px;background: #fff;border: 1px solid #d9d9d9;margin-top: 1.1rem }
+.line{border-bottom: 1px solid #e0e0e0}
+.select-list{padding: .5rem 1.2rem ;}
+.select-title{font-size: 1.5rem;font-weight: bold;height: 4rem;line-height: 4rem}
+.select-top{height: 3.8rem;line-height: 3.8rem;padding-left: .8rem}
+.radioIn{margin: 0;}
+.radioIn label{line-height: 3.2rem;height: 3.2rem;display: block;width: 100%;font-size: 1.5rem;position: relative}
+.radioIn label input,.radio-icon{width: 1.3rem;height: 1.3rem;position: absolute;}
+.radioIn label input{opacity: 0}
+.radio-icon{background: url("../images/radio0.png") no-repeat;background-size: 100%;left: 0;top: .9rem}
+.radioIn label.active .radio-icon{background: url("../images/radio.png") no-repeat;background-size: 100%;left: 0;top: .9rem}
+
+.identity-content select{
+	border: none;
+    font-size: 1.5rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    direction: ltr;
+    background: transparent;
+    line-height: 2rem;
+    width: 100%;
+    color: #666666;
+}

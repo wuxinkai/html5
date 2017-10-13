@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>活动</title>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/huodong.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body >
+	
+	<img src="images/img1.png" onload="imgLoaded(this, 1)">
+	
+	<div class="active-date">活动时间：<span>即日起~2017年10月31日</span></div>
+	
+	<img src="images/img2.png" style="margin-bottom: 15px;" onload="imgLoaded(this)">
+	
+	<img src="images/img3.png" onload="imgLoaded(this)">
+	
+	<div class="lingqu">
+		<img src="images/img4.png" style="margin-bottom: 30px;" onload="imgLoaded(this)">
+		<div class="float" onclick="lingqu()"></div>
+	</div>
+	
+	
+	<img src="images/img5.png" style="margin-bottom: 20px;" onload="imgLoaded(this)">
+	
+	<img src="images/img6.png" onload="imgLoaded(this)">
+</body>
+<script>
+	$(".lingqu .float").css("height",window.screen.width*80/375+"px")
+	/**
+	 * 图片加载跳转宽度
+	 */
+	function imgLoaded(t, index){
+		if(index != null && index == 1){
+			$(t).css("width",window.screen.width+"px")
+		}else{
+			$(t).css("width",(window.screen.width - 30)+"px")
+		}
+	}
+	
+	/**
+	 * 领取
+	 */
+	function lingqu(){
+		window.location.href="https://h5.youzan.com/v2/ump/promocard/fetch?alias=act8oze0"
+	}
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>欢迎</title>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/welcome.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body >
+	
+	<div class="zhidaoyu-detail">
+		<img src="images/welcome.png" width="181">
+	</div>
+	
+	<div class="download-detail">
+		<div>
+			<img src="images/start.png" width="219">
+		</div>
+		
+	</div>
+	
+</body>
+<script>
+	
+	$(function(){
+		$(".download-detail>div>img").attr("width", window.screen.width*219/375)
+		$(".zhidaoyu-detail>img").attr("width", window.screen.width*181.5/375)
+	})
+	
+	/**
+	 * 弹窗
+	 */
+	function download(){
+		$(".download-detail").css("display", "block")
+		$("body").css("position", "fixed")
+	}
+	
+	/**
+	 * 关闭弹窗
+	 */
+	function closeDownload(){
+		$("body").css("position", "relative")
+		$(".download-detail").css("display", "none")
+	}
+</script>
+</html>
