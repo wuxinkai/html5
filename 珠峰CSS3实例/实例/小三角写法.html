@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>sanjiao</title>
+	<style type="text/css">
+.sj{margin:100px;
+
+
+	width: 0;
+	height: 0;
+	border-width:10px;/* 这个值可以改变 */
+	border-color: #f40 transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+}
+
+
+
+i,em,span{display: block;
+			position: absolute;}
+em,span{
+		margin:100px;
+
+
+		width: 0;
+		height: 0;
+		border-width:10px;/* 这个值可以改变 */
+		border-color: #f40 transparent transparent transparent;
+		border-style: solid dashed dashed dashed;}
+		span{border-color: #fff transparent transparent transparent;
+			top:-2px;}
+
+
+
+	.h5sj{width: 300px; height: 30px; border:1px solid #ccc; position: relative;}
+	.h5sj:after{content: "";
+				width:10px;
+				height: 10px;
+				border-top:2px solid #f40;
+				border-right: 2px solid #f40;
+				-webkit-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				position: absolute;
+				top:10px;
+				right: 10px; }
+	</style>
+
+</head>
+<body>
+	<!-- 实心三角写法 -->
+<div class="sj"></div>
+
+	<!-- 空心写法 -->
+	<i>
+		<em></em>
+		<span></span>
+	</i>
+
+	<!-- html5三角   低版本不支持-->
+	<div class="h5sj"></div>
+</body>
+</html>

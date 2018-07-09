@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	.box { width: 200px; height: 200px; border:1px solid #000; background: #ccc; }
+/*	.box:after { content:"我是被css3的伪类写在页面中的文字"; width: 150px; height: 150px; background: pink; display: block; }*/
+	.box:before { content:"我是被css3的伪类写在页面中的文字"; width: 150px; height: 150px; background: pink; display: block; }
+	* { margin: 0; padding: 0; list-style: none; }
+	.myUl { width: 620px; position:relative; }
+	.myDiv { width: 620px; padding: 10px; background: pink; }
+	.myUl li { float: left; width: 100px; height: 30px; border:1px solid #000; }
+	.myUl li p { position:absolute; left: 0px; top: 0px; }
+	
+	
+	/*这段代码 每次要加在cssrest当中 把它当做一个模块来使用 使用方法就是：给高度塌陷的元素 加上这个clearfix类名即可*/
+	.clearfix:after { content: ""; display: block; height: 0; clear: both; visibility: hidden; }
+	.clearfix { display: inline-table; }
+	*html .clearfix { height: 1%; }
+	.clearfix { display: block; }
+	*+html .clearfix { min-height: 1%; }
+	
+	
+</style>
+</head>
+
+<body>
+	<div class="box">
+    	盒子
+    </div>
+    <br>
+<br>
+<br>
+<div class="myDiv">
+    <ul class="myUl clearfix">
+    	<li>
+        	<p>呵呵呵</p>
+        </li>
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    </ul>
+</div>  
+    
+</body>
+</html>

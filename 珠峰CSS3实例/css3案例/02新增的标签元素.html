@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	.box { width: 100px; height: 100px; border:1px solid #000; background: #ccc; }
+</style>
+
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var myWidth;
+		$('.myWidth').change(function(e) {//只要发生了改变 哪怕只是一点点 也会执行一次change中的代码
+          //alert($(this).val());
+		    myWidth = $(this).val();//  '+myWidth+'
+		  	$('.box').css('width',''+myWidth+'px');
+        });
+		var myHeight;
+		$('.myHeight').change(function(e) {//只要发生了改变 哪怕只是一点点 也会执行一次change中的代码
+          //alert($(this).val());
+		    myHeight = $(this).val();//  '+myWidth+'
+		  	$('.box').css('height',''+myHeight+'px');
+        });
+		
+		var myColor;
+		$('.myColor').change(function(e) {
+            //alert($(this).val());
+			myColor = $(this).val();// '+myColor+'
+			$('.box').css('background',''+myColor+'');
+        });
+		
+		$('.myTxt').change(function(e) {
+            alert($(this).val());
+        });
+	})
+</script>
+</head>
+
+<body>
+	姓名：<input type="text" placeholder="请输入您的姓名" autofocus /><br>
+	邮箱：<input type="email" /><br>
+	日期：<input type="date" /><br>
+	数量：<input type="number" /><br>
+	颜色: <input type="color" /><br>
+    范围：<input type="range" value="5" max="20" min="0" /><br>
+	搜索：<input type="search" />
+    <hr />
+    <hr />
+    宽度：<input type="range" value="50" max="100" min="0" class="myWidth" /><br>
+    高度：<input type="range" value="50" max="100" min="0" class="myHeight" /><br>
+	颜色: <input type="color" class="myColor" /><br>
+    <div class="box">
+    
+    </div>
+    <br>
+	<input type="password" class="myTxt">
+</body>
+</html>

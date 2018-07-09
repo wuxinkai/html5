@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+*{ padding:0; margin:0; list-style:none;}
+body,html{ height:100%;}
+body{ overflow:hidden;}
+ul{ height:100%; width:100%; position:absolute; top:0; left:0; z-index:9;}
+ul li{ height:100%; background:pink;  border:1px solid #000; box-sizing:border-box;}
+.gps{ position:fixed; top:50%; right:20px; z-index:10; margin-top:-55px;}
+.gps li{ width:10px; height:10px; background:#ccc; border-radius:50%; margin-bottom:10px; cursor:pointer;}
+.gps .current{ width:15px; height:15px; margin-left:-3px;}
+
+.page1{ position:relative;}
+.page1 div{ position:absolute; left:50%; top:50%; width:155px; height:189px; background:url(110.jpg) no-repeat; margin-top:-94px; margin-left:-77px; transition:all 2s;}
+.page1.out div{ margin-left:-1777px; transform:rotate(720deg)}
+
+.page2{ position:relative;}
+.page2 div{ position:absolute; left:50%; top:50%; width:155px; height:189px; background:url(110.jpg) no-repeat; margin-top:-94px; margin-left:-77px; transition:all 2s;}
+.page2.out div{ transform:rotate(720deg) scale(2,2); opacity:0.1;}
+
+
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.mousewheel.js"></script>
+<script type="text/javascript">
+$(function(){	
+	var snum=0;
+	var colors=['#119ac7','#2dab5f','#ce8114','#19ad93','#0f98c5']
+	var timer=null;
+	//插件要求 
+	/*
+		1.滚动事件必须要给document绑定。
+		2.滚动事件执行的指令当中需要传递两个参数e,d；
+	*/
+	
+	$('ul li').eq(snum).removeClass('out').siblings().addClass('out');
+	
+	$(document).mousewheel(function(e,d){
+		clearTimeout(timer)
+		timer=setTimeout(fn,300)
+		
+		//向下滚动D是-1；上上是+1；
+		function fn(){
+			snum-=d//创造数据
+			if(snum > 4){ snum=4 }
+			if(snum < 0){ snum=0 }
+			$('title').html(snum)//使用数据
+			
+			$('ul').stop().animate({top: -snum*100+'%' },1000)//屏幕的工作
+			$('.gps li').eq(snum).addClass('current').siblings().removeClass();    //角标的工作
+			$('ul li').eq(snum).removeClass('out').siblings().addClass('out');    //添加类和删除类
+		}
+	})
+	
+	$('.gps li').click(function(e) {
+        var index=$(this).index();
+		$(this).addClass('current').siblings().removeClass();//角标的工作
+		$('ul').stop().animate({top: -index*100+'%' },1000)//屏幕的工作
+		snum=index;
+    });
+	
+	$('ul li').each(function(index, element) {
+        
+		$(element).css('background', colors[index])
+		
+    });
+	
+})
+</script>
+</head>
+
+<body>
+<ol class="gps">
+	<li class="current"></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+
+<ul>
+    <li class="page1 out">
+    	<div></div>
+    </li>
+    <li class="page2 out">
+    	<div></div>
+    </li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+</html>

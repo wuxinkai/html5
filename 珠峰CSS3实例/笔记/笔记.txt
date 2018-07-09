@@ -1,0 +1,70 @@
+【1.e的快捷键】
+e.altKey、e.shiftKey、e.ctrlKey 分别代表 按住了alt、shift、ctrl按钮
+用这些判断的时候，直接使用就行了，不用再判断键盘的对应编号
+
+【2.change事件】
+它可以检测到被检测标签的变化，只要有任何的变化，就会触发change事件
+
+【3.css3圆角属性】
+css3选择器：    
+:nth-of-type(1)      小括号中的数值是从1开始计数的
+:first-child             选中的第一个元素
+:last-child              选中的最后一个元素
+
+【4.盒子阴影属性】
+box-shadow: x轴 y轴 羽化程度 颜色 是否内阴影
+例：box-shadow:  0px 0px 20px red inset;    
+注意：写inset 后就变为了 内阴影,如果不写就是外阴影；如果不指定颜色的话，颜色值会继承字体的颜色;
+
+【5.文字阴影】
+text-shadow: x轴 y轴 羽化 颜色 内阴影;
+例：text-shadow: 0px 0px 2px #fff;
+注意：有的谷歌浏览器会把文字阴影显示错误，这时候只要给它加上加粗属性即可解决； 文字阴影的羽化，一般来说加2或者3就够了
+
+【6.css3的伪类】
+:after  { content:"这个是content是必须有的属性"; width: 100px; height: 100px; background: pink; /*用伪类写在页面中的元素，它是行内元素，如果想要设置宽高属性的话，就必须转化为块、行内块元素*/  }
+:before { 与after相似 }
+注意：after是在盒子的后面添加内容、before反之
+
+注意：我们以后在解决高度塌陷问题的时候，就不要使用overflow:hidden;  要使用我们clearfix类去解决
+
+面试题    ::after ::before  这是css3的伪类写法，它有自己的名字----伪元素
+
+【7.浏览器的前缀】
+五大浏览器厂商，只有4个内核，
+ie                   -ms-
+火狐               -moz-
+谷歌和苹果     -webkit-
+欧朋               -o-
+
+【8.转换模块】
+transform 是控制的css3的转换模块
+3个核心属性：
+（1）transform: rotate(30deg)       改变角度 deg代表度数的意思
+（2）transform: scale(1,1)              小括号中的数值代表缩放，第一个是x轴 第二个是y轴
+（3）transform: translate(20px,40px)   代表移动的距离，小括号中代表，x和y的距离
+注意：从现在起，这些css3的新属性都要加上各个浏览器的前缀，因为它们的价值比较高，导致兼容性很差；最后一个要写不带前缀的代码;
+
+【9.过度模块】
+transition 它是和hover伪类一起使用的
+书写步骤
+1：按照以往的写默认样式
+2：给元素加hover伪类，在此处写鼠标滑过之后的样式
+3：在默认样式中用transition属性去设置要改变的属性 （属性名 时间 逗号 属性名 时间）例： ( width 1s,height 1s....... )
+注意：transform属性和background很相似，它们都是复合属性，所以在设置多个transform属性的时候，中间用空格隔开即可，不用再写一个transform属性了
+例：transform: scale(1.2,1.2) rotate(360deg);
+
+【10.动画模块】
+书写步骤：
+1.给要添加动画的元素加上 animation: zdydh 3s;
+2.换一行写 @keyframes 动画名称 { 这里是动画内容 } 注意： 前缀别忘了：@-o-keyframes
+3.在大括号中写动画，from{ 代表从0开始的动画 }  to{ 最后位置的动画 }； 还可以写成百分百去控制动画： 0%{  }   50%{  } 100%{  }
+无限次播放：infinite
+逆向播放：alternate
+
+【11.transition动画速度】
+在时间之前加 ease（逐渐慢下来）、ease-in(加速)、ease-out（减速）、ease-in-out（先加速后减速）  默认是匀速
+例： transition: all ease 3s;
+在时间后面再加一个时间，它代表的是停留多少秒之后再执行动画
+例： transition: all ease 3s 4s;  停留4s再运动 
+

@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3属性选择器</title>
+<style>
+p[id]{background:red;}
+p[id="green"]{background:green;}
+p[class~="yellow"]{background:yellow;}
+p[class|="a"]{background:blue;}
+			
+a[href^="http://"]{color:red;text-decoration:none;}
+a[href$="rar"]{color:pink;text-decoration:none;}
+a[href$="rar"]:after{content:url(icon.jpg);}
+a[href*="o"]{background-color:#96F;}
+</style>
+</head>
+
+<body>
+<p id="abc">小红</p>
+        <p id="green">小绿</p>
+        <p class="fl yellow">小黄</p>
+        <p class="a-b">小蓝</p>
+        <hr />
+        <!--E[att^="值"]选中以指定值开头的属性元素-->
+        <a href="http://www.baidu.com">百度一下，你就知道</a>
+        <a href="index.php">返回首页</a><br />
+        <!--E[att$="值"]选中以指定值结尾的属性元素-->
+        <a href="down.rar">点此下载</a>
+        <!--E[att*="值"]选中包含指定字符的属性元素-->
+        
+</body>
+</html>

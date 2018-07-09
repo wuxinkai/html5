@@ -1,0 +1,73 @@
+<!doctype html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>弹性盒布局</title>
+<style>
+ul,li{margin:0;padding:0;}
+ul{margin-right:30px;}
+li{line-height:22px;}
+#container{
+	display:-moz-box;/*设置元素为盒布局*/
+	display:-webkit-box;
+	border:2px solid #d8d8d8;
+	-moz-box-orient:horizontal;/*调整盒方向vertical | horizontal*/
+	-webkit-box-orient:horizontal;
+	width:65%;
+	height:150px;
+	padding:20px;
+	font-size:14px;
+	font-family:"微软雅黑";
+	height:auto;/*解决窗口高度变小，文字显示到边框外面*/
+}
+#left{
+	-moz-box-flex:1;/*设置或检索弹性盒模型对象的子元素如何分配其剩余空间*/
+	-webkit-box-flex:1;
+	-moz-box-ordinal-group:2;
+	-webkit-box-ordinal-group:2;/*调整盒顺序*/}
+#middle{
+	-moz-box-flex:2;
+	-webkit-box-flex:2;
+	-moz-box-ordinal-group:1;
+	-webkit-box-ordinal-group:1;
+	}
+#right{
+	-moz-box-flex:3;
+	-webkit-box-flex:3;
+	-moz-box-ordinal-group:3;
+	-webkit-box-ordinal-group:3;
+	}
+</style>
+</head>
+
+<body>
+<div id="container">
+    <div id="left">
+    	<ul>
+            	<li>官厅风景区豪宅总价240万</li>
+                <li>15号线MINI空间14300起</li>
+                <li>最热10新盘大兴新城2居130万元</li>
+                <li>刚需盘精选 京东2居67万</li>
+                <li>|美式实木卧室全套9999元</li>
+            </ul>
+    </div>
+    <div id="middle">
+    	<ul>
+            	<li>房地产伪市场化还持续多久</li>
+                <li>马宇:质检总局有何资格封杀我</li>
+                <li>电视相亲让我想到猪肉市场</li>
+                <li>大展鸿图：甘草罗汉果卤鸭翅</li>
+                <li>欲罢不能美容菜：银丝蒸生蚝</li>
+            </ul>
+    </div>
+    <div id="right">
+    	<ul>
+            	<li>重磅利好发力 1类股迎暴涨</li>
+                <li>绝密信号！跟它炒股必抓涨停</li>
+                <li>股民重亏 迎15个月最惨一天</li>
+                <li>80岁老股民死扛 活到老炒到老</li>
+                <li>暴跌后三点定输赢 将一锤定音</li>
+            </ul>
+    </div>
+</div>
+</body>
+</html>
