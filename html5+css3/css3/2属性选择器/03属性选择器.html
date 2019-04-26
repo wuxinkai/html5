@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  p[id]{background:red;}
+
+  p[id="green"]{background:green;}
+
+  p[class~="yellow"]{background:yellow;}
+
+  p[class|="a"]{background:blue;}
+        
+    /* ^ 选中以指定值开头的属性元素 */
+  a[href^="http://"]{color:red;text-decoration:none;}
+
+
+  /* $ [att$="值"]选中以指定值结尾的属性元素 */
+   a[href$="php"]{color:pink;text-decoration:none;}
+  a[href$="php"]:after{content:url(icon.jpg);}
+
+
+  /* [att*="值"]选中包含指定字符的属性元素 */
+  a[href*="j"]{background-color:#96F; color: #000;}
+
+  </style>
+</head>
+<body>
+        <p id="abc">小红</p>
+
+        <p id="green">小绿</p>
+
+        <p class="fl yellow">小黄</p>
+
+        <p class="a-b">小蓝</p>
+        
+        <hr />
+        <!--E[att^="值"]选中以指定值开头的属性元素-->
+        <a href="http://www.baidu.com">百度一下，你就知道</a>
+
+          <br><br>
+        <a href="index.php">选中以指定值结尾的属性元素php</a><br />
+        <!--E[att$="值"]选中以指定值结尾的属性元素-->
+
+<br>
+        <a href="dowjn.rar">选中包含指定((( j )))的属性元素</a>
+        <!--E[att*="值"]选中包含指定字符的属性元素-->
+</body>
+</html>

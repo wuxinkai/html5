@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+
+    /* 选择属于其父元素的首个子元素的每个 <p> 元素，并为其设置样式： */
+    p:first-child {
+      color: red;
+      font-size: 30px
+    }
+
+    /* 选择属于其父元素的最后一个子元素的每个 <p> 元素，并为其设置样式： */
+    p:last-child{
+      color: blue;
+      font-size: 24px
+    }
+  </style>
+</head>
+
+<body>
+  <body>
+    <p>body首个子元素的设置样式</p>
+    <div >
+      <p>div首个子元素的设置样式</p>
+      <p>选择属于其父元素的首个子元素的设置样式 </p>
+      <p>last-child最后一个子元素 </p>
+    </div>
+    <hr />
+    <div>
+      <h4>公司动态</h4>
+      <p>这是div的第二个子元素，第一个是h4</p>
+      <p>选择属于其父元素的首个子元素的设置样式 </p>
+      <p>last-child最后一个子元素 </p>
+    </div>
+  </body>
+</body>
+
+</html>

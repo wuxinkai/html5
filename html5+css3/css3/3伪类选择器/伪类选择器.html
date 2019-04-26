@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  /* 选择每个 <p> 元素的首行，并为其设置样式： */
+  p::first-line{color:red;}
+
+  /* 选择每个 <p> 元素的首字母，并为其设置样式： */
+  p::first-letter{color:green;font-size:25px;}
+
+  /* 在每个 <p> 元素的内容之前插入新内容： */
+  div::before{content:"我在前面显示";color:blue}
+
+  /* 在每个 <p> 元素的内容之后插入新内容 */
+  div::after{content:"这是在后面插入的内容";color:green}
+
+
+/*浏览时选中文字看见的效果, 设置 font-size: 没有效果*/
+  span::selection{background:yellow;color: #f60}
+
+/*  */
+  a[href$="pdf"]::before{content:url(pdf.jpg)}
+  </style>
+</head>
+<body>
+  <p>首  ::first-line CSS pseudo-element （CSS伪元素）在某 block-level element （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小</p>
+  <p>和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的html元素。</p>
+  <p>首 ::first-line 伪元素只能在块容器中,所以,::first-line伪元素只能在一个display值为block, inline-block, table-cell 或者 table-caption中有用.。在其他的类型中，::first-line 是不起作用的.</p>
+  <br>
+  <div>
+     这是一个div 
+  </div>
+  <br>
+  <span>浏览时选中文字看见的效果浏览时选中文字看见的效果浏览时选中文字看见的效果浏览时选中文字看见的效果浏览时选中文字看见的效果浏览时选中文字看见的效果</span>
+  <br>
+  <br>
+  <br>
+  <a href="12345678.pdf"> 利用伪类元素引入content:url(pdf.jpg)</a>
+</body>
+</html>

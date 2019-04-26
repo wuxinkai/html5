@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+
+      /* 名字 */
+      animation-name: myfirst;
+      /* 时长 */
+      animation-duration: 5s;
+      /* 运动曲线 */
+      animation-timing-function: linear;
+      /* 延时2s */
+      animation-delay: 2s;
+      /* 规定动画被播放的次数。默认是 1 */
+      animation-iteration-count: infinite;
+      /* 规定动画是否在下一周期逆向地播放 normal */
+      /* 正循环 reverse ，倒循环unset  到头后原路返回 alternate-reverse */
+      animation-direction: alternate;
+
+      /* 规定动画是否正在运行或暂停 默认是 "running */
+      animation-play-state: running;
+
+      /* animation: myfirst 5s; */
+
+    }
+
+    @keyframes myfirst {
+      0% {
+        background: red;
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+        background: yellow;
+        left: 200px;
+        top: 0px;
+      }
+
+      50% {
+        background: blue;
+        left: 200px;
+        top: 200px;
+      }
+
+      75% {
+        background: green;
+        left: 0px;
+        top: 200px;
+      }
+
+      100% {
+        background: red;
+        left: 0px;
+        top: 0px;
+      }
+    }
+
+
+
+    p {
+      width: 100px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      border-radius: 10px;
+      background: red;
+      text-shadow: 0 0 3px #fff;
+      border: 1px solid #000;
+      position: absolute;
+      left: 0px;
+      top: 100px;
+      animation: gogogo 4s infinite alternate;
+    }
+
+    @-webkit-keyframes gogogo {
+      0% {
+        background: red;
+        left: 0px;
+      }
+
+      25% {
+        background: yellow;
+      }
+
+      50% {
+        background: orange;
+        left: 200px;
+      }
+
+      75% {
+        background: gray;
+      }
+
+      90% {
+        background: pink;
+      }
+
+      100% {
+        background: blue;
+        left: 800px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <p></p>
+</body>
+
+</html>

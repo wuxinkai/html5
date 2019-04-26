@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+ .box1 {
+    width:100px;
+	height:100px;
+	background:red;
+  /* width 是属性名  2s 是过度开始时间  */
+	/* transition: width 2s linear , height 2s, transform 2s; */
+
+  /* 延时1.2 ，1s运行完毕 */
+  transition: all ease-in 1s 1.2s;
+
+  /* 常用写法 */
+  /* transition: all 1s; */
+  }
+
+  .box1:hover{
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+  }
+  </style>
+</head>
+<body>
+  <p>设置四个过渡属性。</p>
+  <p>transition-property:定应用过渡的 CSS 属性的名称</p>
+  <p>transition-duration 定义过渡效果花费的时间。默认是 0。</p>
+  <p>transition-timing-function 规定过渡效果的时间曲线。默认是 "ease"。</p>
+  <p>transition-delay,定过渡效果何时开始。默认是 0。</p>
+  <div class="box1"></div>
+</body>
+</html>

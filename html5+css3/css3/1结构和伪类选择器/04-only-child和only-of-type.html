@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul {
+      width: 500px;
+      list-style: none;
+      padding: 0;
+      margin: 100px auto;
+      border: 1px solid #ccc;
+    }
+
+    ul li {
+      padding-left: 20px;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #ccc
+    }
+
+    /* 匹配属于父元素中唯一子元素, ul里面不能有两个 li ，否则失效 */
+    li:only-child {
+      font-size: 20px;
+      color: red;
+      font-weight: bold;
+    }
+
+    /* only-of-type 指定属于父元素的特定类型的唯一子元素的每个 p 元素*/
+    p:only-of-type{color:red; font-weight:bold;}
+
+    /* only-child只有当元素的父元素(没有任何类型)的其他子元素时 */
+    /* only-of-type如果它的父节点没有（相同类型）的其他子节点。 */
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>匹配属于父元素中唯一子元素:</li>
+  </ul>
+  <ul>
+    <li>这也是第一个li，但是他有两个弟弟，条件不成立</li>
+    <li>匹配属于父元素中唯一子元素:</li>
+    <li>匹配属于父元素中唯一子元素:</li>
+    <li>匹配属于父元素中唯一子元素:</li>
+    <li>匹配属于父元素中唯一子元素:</li>
+  </ul>
+
+  <br>
+  <br>
+  <div>
+    <p>这是一个段落。</p>
+    <div>这是一个不同类型的标签，上面还是起作用的</div>
+  </div>
+  <br>
+  <div>
+    <p>这是一个段落。</p>
+    <p>这是一个段落。</p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="device.min.js"></script>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//页面加载完成后 就执行一些列的判断 如果当前页面宽度符合手机，我们就跳转到手机html页面
+		if(device.windows()){
+			//alert(1);
+			window.location = "pc.html";
+		}
+		if(device.mobile()){
+			window.location = "mobile.html";
+		}
+	})
+</script>
+
+</head>
+
+<body>
+	<h1>pad</h1>
+</body>
+</html>

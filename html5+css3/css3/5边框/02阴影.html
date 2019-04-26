@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .box {
+      width: 310px;
+      height: 160px;
+      margin: 50px 50px 0 0;
+      float: left;
+ 
+       }
+
+
+
+
+
+    .outset {
+      -webkit-box-shadow: 5px 8px rgba(0, 0, 0, 0.6);
+      box-shadow: 5px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /*外阴影常规效果*/
+    .right {
+      -webkit-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /*天猫效果*/
+    .outset-blur {
+      -webkit-box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.6);
+      box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    /*外阴影模糊效果*/
+    .outset-extension {
+      -webkit-box-shadow: 5px 5px 5px 8px rgba(0, 0, 0, .6);
+      box-shadow: 5px 5px 5px 8px rgba(0, 0, 0, .6);
+    }
+
+    /*外阴影模糊外延效果*/
+    .inset {
+      -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+      box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+    }
+
+    /*内阴影效果*/
+    .multiple-shadow {
+      -webkit-box-shadow: 0 0 5px 3px rgba(234, 72, 234, .6), 0 0 5px 6px rgba(0, 182, 0, .6), 0 0 5px 10px rgba(255, 255, 0, .6);
+      box-shadow: 0 0 5px 3px rgba(255, 0, 0, .6), 0 0 5px 6px rgba(0, 182, 0, .6), 0 0 5px 10px rgba(255, 255, 0, .6);
+    }
+
+    /*外阴影模糊效果*/
+  </style>
+</head>
+
+<body>
+    <div class="box outset"></div>
+      <div class="box outset-blur"></div>
+      <div class="box outset-extension"> </div>
+      <div class="box inset"></div>
+      <div class="box right"></div>
+      <div class="box multiple-shadow"></div>
+</body>
+
+</html>

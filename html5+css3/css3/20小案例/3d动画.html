@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #my3dspace{
+            -webkit-perspective: 800;
+            -moz-perspective: 800;
+            -o-perspective: 800;
+            -ms-perspective: 800;
+            perspective: 800;
+            -webkit-perspective-origin: 50% 50%;
+            -moz-perspective-origin: 50% 50%;
+            -o-perspective-origin: 50% 50%;
+            -ms-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+            overflow: hidden;/*目的不影响其他属性*/
+        }
+        #pagegroup{
+            width: 400px;
+            height: 400px;
+            margin:0 auto;
+            -webkit-transform-style:preserve-3d ;
+            -moz-transform-style:preserve-3d ;
+            -o-transform-style:preserve-3d ;
+            -ms-transform-style:preserve-3d ;
+            transform-style:preserve-3d ;
+            position: relative;
+        }
+        .page{/*翻书效果*/
+            width: 360px;
+            height: 360px;
+            padding: 20px;
+            background-color: #000;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 360px;
+            line-height: 360px;
+            text-align: center;
+
+            position: absolute;
+        }
+        #page1{
+            -webkit-transform-origin:bottom ;/*沿着底部旋转*/
+            -moz-transform-origin:bottom;
+            -o-transform-origin:bottom;
+            -ms-transform-origin:bottom ;
+            transform-origin:bottom;
+            -webkit-transition:-webkit-transform 1s linear ; /*用一秒钟的时间用linear的效果显示*/
+            -moz-transition:-webkit-transform 1s linear ;
+            -o-transition:-webkit-transform 1s linear ;
+            -ms-transition:-webkit-transform 1s linear ;
+            transition:-webkit-transform 1s linear ;
+        }
+        #page2,#page3,#page3,#page4,#page5,#page6{
+            -webkit-transform-origin:bottom ;/*沿着底部旋转*/
+            -moz-transform-origin:bottom;
+            -o-transform-origin:bottom;
+            -ms-transform-origin:bottom ;
+            transform-origin:bottom;
+            -webkit-transition:-webkit-transform 1s linear ;/*用一秒钟的时间用linear的效果显示*/
+            -moz-transition:-webkit-transform 1s linear ;
+            -o-transition:-webkit-transform 1s linear ;
+            -ms-transition:-webkit-transform 1s linear ;
+            transition:-webkit-transform 1s linear ;
+           -webkit-transform:rotateX(90deg); /*X轴旋转90度*/
+            -moz-transform:rotateX(90deg);
+            -o-transform:rotateX(90deg);
+            -ms-transform:rotateX(90deg);
+            transform:rotateX(90deg);
+        }
+        #op{
+            text-align: center;
+            margin:50px auto;
+        }
+    </style>
+    <script type="application/javascript">
+        var curIndex = 1;
+        function next(){
+            if(curIndex == 6)
+                return;
+            var curpage = document.getElementById('page'+curIndex)
+          curpage.style.webkitTransform = "rotateX(-90deg)"// js在谷歌浏览器中的显示效果
+            curpage.style.oTransform =  "rotateX(-90deg)"
+            curpage.style.msTransform =  "rotateX(-90deg)"
+            curpage.style.mozTransform =  "rotateX(-90deg)"
+            curpage.style.transform =  "rotateX(-90deg)"
+             curIndex++;
+
+            var nextpage = document.getElementById('page'+curIndex)
+            nextpage.style.webkitTransform = "rotateX(0deg)"
+            nextpage.style.oTransform =  "rotateX(0deg)"
+            nextpage.style.msTransform =  "rotateX(0deg)"
+            nextpage.style.mozTransform =  "rotateX(0deg)"
+            nextpage.style.transform =  "rotateX(0deg)"
+        }
+        function prev(){
+                if(curIndex == 1)
+                    return;
+                var curpage = document.getElementById('page'+curIndex)
+                curpage.style.webkitTransform = "rotateX(90deg)"
+                curpage.style.oTransform =  "rotateX(90deg)"
+                curpage.style.msTransform =  "rotateX(90deg)"
+                curpage.style.mozTransform =  "rotateX(90deg)"
+                curpage.style.transform =  "rotateX(90deg)"
+
+                curIndex--;
+
+                var prevpage = document.getElementById('page'+curIndex)
+                prevpage.style.webkitTransform = "rotateX(0deg)"
+                prevpage.style.oTransform =  "rotateX(0deg)"
+                prevpage.style.msTransform =  "rotateX(0deg)"
+                prevpage.style.mozTransform =  "rotateX(0deg)"
+                prevpage.style.transform =  "rotateX(0deg)"
+        }
+    </script>
+</head>
+<body>
+    <div id="my3dspace">
+        <div id="pagegroup">
+            <div class="page" id="page1">1</div>
+            <div class="page" id="page2">2</div>
+            <div class="page" id="page3">3</div>
+            <div class="page" id="page4">4</div>
+            <div class="page" id="page5">5</div>
+            <div class="page" id="page6">6</div>
+        </div>
+    </div>
+    <div id="op">
+        <a href="javascript:next()">next</a> <a href="javascript:prev()">previous</a>
+    </div>
+</body>
+</html>

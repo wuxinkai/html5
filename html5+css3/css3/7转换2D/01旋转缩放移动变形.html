@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 150px;
+      height: 100px;
+      background-color: yellow;
+      margin-left: 50px;
+    }
+
+    .box:hover {
+      /* rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转 */
+      /* transform: rotate(30deg); */
+    }
+    /*rotateX 轴旋转  */
+    .box:hover{transform: rotateX(120deg);}
+
+    /* rotateY 旋转 */
+    .box:hover{transform: rotateY(120deg);}
+
+    .box2 {
+      width: 150px;
+      height: 100px;
+      background-color: blue;
+      margin-left: 50px;
+      color: #fff;
+
+    }
+
+    .box2:hover {
+      /* ranslate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动  */
+      transform: translate(10px, 100px);
+    }
+
+    .box3 {
+      width: 150px;
+      height: 100px;
+      color: #fff;
+      margin-top: 100px;
+      background-color: blue;
+
+    }
+
+    .box3:hover {
+      /* scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数： */
+      transform: scale(.8, 1.2);
+    }
+
+    .box4 {
+      width: 100px;
+      height: 75px;
+      margin-top: 50px;
+      margin-left: 50px;
+      background-color: red;
+      border: 1px solid black;
+
+    }
+
+    .box4:hover {
+      /*  包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜 */
+      transform: skew(30deg, 20deg);
+    }
+  </style>
+</head>
+
+<body>
+  <p> 在本章您将了解2D变换方法：</p>
+  <p> translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</p>
+  <p> rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</p>
+  <p> scale()</p>
+  <p> skew()</p>
+  <p> matrix()</p>
+  <br>
+  <div class="box"> rotate旋转</div>
+  <br>
+  <div class="box2"> 比原来的位置向右10px ，向下100px</div>
+  <br>
+  <div class="box3"> scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：</div>
+  <br>
+  <div class="box4">skew(30deg,20deg) 元素在X轴和Y轴上倾斜20度30度</div>
+</body>
+
+</html>

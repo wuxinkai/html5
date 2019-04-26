@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  /* 文字超出...表示 */
+.p1{width:110px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+
+/* 中文超出了会默认换行，但是对于英文或者数字来说超出不换行，要加上 */
+.p2{
+  width:110px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+  </style>
+</head>
+<body>
+    <p class="p1">文字超出表示 overflow:hidden;white-space:nowrap;text-overflow:ellipsis;</p>
+    <br>
+    <p class="p2">word-wrap: break-word;word-break: break-all;</p>
+    
+</body>
+</html>

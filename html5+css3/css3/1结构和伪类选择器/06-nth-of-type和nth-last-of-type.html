@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 代表他是第n个类型为div的子元素 */
+  div:nth-of-type(2){color:red; font-weight:bold;}
+
+  /* div：nth-child（n） 和  div:nth-of-typ(n) 的区别 */
+  /* 
+  div：nth-child（n） 就代表他是父元素的div元素，并且！并且他是爸爸元素的第n个孩子元素
+  div：nth-of-type（n）代表他是第n个类型为div的子元素,但他的第二个元素是p标签
+   */
+   /* div:nth-child（2）{
+    color:red; font-weight:bold
+   } */
+
+   div:nth-last-of-type(2){color:red; font-weight:bold;}/*选中指定序号*/
+  </style>
+</head>
+<body>
+  <div>
+   <div>nth-of-type 代表他是第n个类型为div的子元素</div>
+   <p> 元素p元素p元素p元素p元素p元素p元素p元素p元素p元素p</p>
+
+   <div>这是第二个，div元素</div>
+   <p> 元素p元素p元素p元素p元素p元素p元素p元素p元素p元素p</p>
+
+   <div>nth-of-type 代表他是第n个类型为div的子元素</div>
+   <p> 元素p元素p元素p元素p元素p元素p元素p元素p元素p元素p</p>
+
+   <div>nth-of-type 代表他是第n个类型为div的子元素</div>
+   <p> 元素p元素p元素p元素p元素p元素p元素p元素p元素p元素p</p>
+
+   <div>nth-last-of-type 倒数第二个div标签</div>
+   <p> 元素p元素p元素p元素p元素p元素p元素p元素p元素p元素p</p>
+   
+   <div>nth-of-type 代表他是第n个类型为div的子元素</div>
+   <p> 元素p元素p元素p元素p元素p元素p元素p元素p元素p元素p</p>
+  </div>
+</body>
+</html>

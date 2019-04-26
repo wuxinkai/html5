@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* + 相邻的一个 兄弟 */
+   ul li.a + li{
+      color: red;
+    }
+
+/* 找到后面相邻的所有 兄弟 */
+   ol li.a ~ li{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="a"> 就是查找li元素后面的第一个兄弟节点</li>
+    <li> 就是查找li元素后面的第一个兄弟节点</li>
+    <li> 就是查找li元素后面的第一个兄弟节点</li>
+    <li> 就是查找li元素后面的第一个兄弟节点</li>
+    <li> 就是查找li元素后面的第一个兄弟节点</li>
+    <li> 就是查找li元素后面的第一个兄弟节点</li>
+  </ul>
+
+
+  <ol>
+      <li class="a"> 查找A元素后面的所有兄弟B节点</li>
+      <li> 查找A元素后面的所有兄弟B节点</li>
+      <li> 查找A元素后面的所有兄弟B节点</li>
+      <li> 查找A元素后面的所有兄弟B节点</li>
+      <li> 查找A元素后面的所有兄弟B节点</li>
+      <li> 查找A元素后面的所有兄弟B节点</li>
+    </ol>
+</body>
+</html>

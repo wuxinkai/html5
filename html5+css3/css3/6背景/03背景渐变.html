@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 上下渐变 */
+  #grad1 {
+    height: 200px;
+    width: 300px;
+    float: left;
+    background: linear-gradient(red, blue); /* 标准的语法（必须放在最后） */
+
+    /* 0deg 度数也可以实现 */
+    /* background: linear-gradient(0deg, red, blue) */
+}
+
+/* 左边向右 */
+#grad2 {
+  height: 200px;
+    width: 300px;
+    float: left;
+    margin-left: 30px;
+  background: linear-gradient(to right, red , blue); /* 标准的语法 */
+  /* background: linear-gradient(90deg, red, blue); */
+}
+/* 从左上角开始（到右下角）的线性渐变。起点是红色，慢慢过渡到蓝色 */
+#grad3{
+  height: 200px;
+    width: 300px;
+    float: left;
+    margin-left: 30px;
+  background: linear-gradient(to bottom right, red , blue); /* 标准的语法（必须放在最后） */
+}
+
+/* 重复性渐变 */
+#grad4{
+  height: 200px;
+    width: 300px;
+    float: left;
+    margin-left: 30px;
+  background: repeating-linear-gradient(red, yellow 10%, green 20%); /* 标准的语法（必须放在最后） */
+}
+
+
+/* 径向渐变 */
+#grad5{ 
+  height: 200px;
+    width: 300px;
+    float: left;
+    margin-left: 30px;
+  background: radial-gradient(red, green, blue);
+  /* 渐变比列 */
+  background: radial-gradient(red 5%, green 15%, blue 60%); 
+
+  /* 圆形渐变 */
+  background: radial-gradient(circle, red, yellow, green); 
+
+  /* 渐变位置 */
+  background: radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black); 
+  }
+  </style>
+</head>
+<body>
+    <p>线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向</p>
+    <p>径向渐变（Radial Gradients）- 由它们的中心定义</p>
+
+    <div id="grad1"></div>
+    <div id="grad2"> </div>
+    <div id="grad3"> </div>
+    <div id="grad4"> </div>
+
+
+    <!-- 径向渐变 -->
+    <div id="grad5"></div>
+</body>
+</html>
