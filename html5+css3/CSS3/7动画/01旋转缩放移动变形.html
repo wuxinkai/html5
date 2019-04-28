@@ -24,6 +24,8 @@
     /* rotateY 旋转 */
     .box:hover{transform: rotateY(120deg);}
 
+
+    /* 平移 */
     .box2 {
       width: 150px;
       height: 100px;
@@ -32,10 +34,9 @@
       color: #fff;
 
     }
-
     .box2:hover {
       /* ranslate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动  */
-      transform: translate(10px, 100px);
+      transform: translate(100px, 100px);
     }
 
     .box3 {
@@ -48,7 +49,7 @@
     }
 
     .box3:hover {
-      /* scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数： */
+      /* scale() 放大 缩小方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数： */
       transform: scale(.8, 1.2);
     }
 
@@ -63,7 +64,7 @@
     }
 
     .box4:hover {
-      /*  包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜 */
+      /*   歪曲变形  包含两个参数值，分别表示X轴和Y轴倾斜的角度，如果第二个参数为空，则默认为0，参数为负表示向相反方向倾斜 */
       transform: skew(30deg, 20deg);
     }
   </style>
