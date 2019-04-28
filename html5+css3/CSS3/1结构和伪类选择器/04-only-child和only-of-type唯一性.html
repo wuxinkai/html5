@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    /* only 唯一的意思   昂里 */
     ul {
       width: 500px;
       list-style: none;
@@ -33,7 +34,7 @@
     p:only-of-type{color:red; font-weight:bold;}
 
     /* only-child只有当元素的父元素(没有任何类型)的其他子元素时 */
-    /* only-of-type如果它的父节点没有（相同类型）的其他子节点。 */
+    /* only-of-type如果它的父节点没有（相同类型）的其他子节点。可以生效 */
   </style>
 </head>
 
@@ -57,7 +58,7 @@
   </div>
   <br>
   <div>
-    <p>这是一个段落。</p>
+    <p>下面有相同的p标签这行不生效。</p>
     <p>这是一个段落。</p>
   </div>
 </body>

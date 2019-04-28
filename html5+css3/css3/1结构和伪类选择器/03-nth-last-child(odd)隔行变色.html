@@ -19,8 +19,8 @@ ul li,ol li{
   line-height: 30px;
   border-bottom: 1px solid #ccc
 }
-
-    /* 从最后向前数，偶数都设置成yellow */
+    /* nth (某事已发生多次，并强调其频繁性) 第n次的 */
+    /*规定属于其父元素的第 偶数或基数个子元素的每个 li元素，从最后一个子元素开始计数： */
     /* odd 偶数， even 是基数 */
     ul li:nth-last-child(odd){background:yellow;}
     
@@ -29,8 +29,10 @@ ul li,ol li{
     /* last 选择父元素下的倒数第二个儿子  */
     ul li:nth-last-child(2){background:#c00;color: #fff}
 
-  /*  nth-child是从上往下数， nth-child 和nth-last-child 相反 */
+  /*  规定属于其父元素的第n+1个子元素的每个 p 的背景色 */
     ol li:nth-child(3n+1){background:#c00;color: #fff}
+
+    /* nth-child 和 nth-last-child 相反 */
     </style>
 </head>
 <body>

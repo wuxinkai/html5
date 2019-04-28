@@ -9,12 +9,13 @@
   /* 文字超出...表示 */
 .p1{width:110px; overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 
-/* 中文超出了会默认换行，但是对于英文或者数字来说超出不换行，要加上 */
+
 .p2{
   width:110px;
   overflow:hidden;
   white-space:nowrap;
   text-overflow:ellipsis;
+/* 中文超出了会默认换行，但是对于英文或者数字来说超出不换行，要加上 */
   word-wrap: break-word;
   word-break: break-all;
 }

@@ -21,51 +21,47 @@
             float: left;
         }
         
-        .outset {
+        .outset-01 {
             -webkit-box-shadow: 5px 8px rgba(0, 0, 0, 0.6);
+            /* 水平5 垂直8 */
             box-shadow: 5px 8px rgba(0, 0, 0, 0.6);
         }
-        /*外阴影常规效果*/
-        
-        .right {
+        .outset-02 {
+            -webkit-box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.6);
+            /* 水平5 垂直8 模糊5*/
+            box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.6);
+        }
+        .outset-03 {
             -webkit-box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
             box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
         }
-        /*天猫效果*/
-        
-        .outset-blur {
-            -webkit-box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.6);
-            box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.6);
-        }
-        /*外阴影模糊效果*/
-        
-        .outset-extension {
-            -webkit-box-shadow: 5px 5px 5px 8px rgba(0, 0, 0, .6);
-            box-shadow: 5px 5px 5px 8px rgba(0, 0, 0, .6);
-        }
-        /* inset 内阴影模糊外延效果*/
-        
-        .inset {
+        .outset-04 {
             -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
-            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .6) inset;
+               /* 水平阴影允许负值 垂直阴影  模糊距离 阴影的尺寸   阴影的颜色            将外部阴影 (outset) 改为内部阴影。*/
+            box-shadow: 2px        2px       5px     1px        rgba(0, 0, 0, .6)   inset;
         }
-        /*外阴影效果*/
+        /* 可以是负数 */
+        .outset-05 {
+            -webkit-box-shadow: -5px -5px 5px 8px rgba(0, 0, 0, .6);
+            box-shadow: -5px -5px 5px 8px rgba(0, 0, 0, .6);
+        }
         
-        .multiple-shadow {
+        /* 多层阴影 */
+        .outset-06 {
             -webkit-box-shadow: 0 0 5px 3px rgba(234, 72, 234, .6), 0 0 5px 6px rgba(0, 182, 0, .6), 0 0 5px 10px rgba(255, 255, 0, .6);
             box-shadow: 0 0 5px 3px rgba(255, 0, 0, .6), 0 0 5px 6px rgba(0, 182, 0, .6), 0 0 5px 10px rgba(255, 255, 0, .6);
         }
-        /*外阴影模糊效果*/
+
     </style>
 </head>
 
 <body>
-    <div class="box outset"></div>
-    <div class="box outset-blur"></div>
-    <div class="box outset-extension"> </div>
-    <div class="box inset"></div>
-    <div class="box right"></div>
-    <div class="box multiple-shadow"></div>
+    <div class="box outset-01"></div>
+    <div class="box outset-02"></div>
+    <div class="box outset-03"></div>
+    <div class="box outset-04"></div>
+    <div class="box outset-05"> </div>
+    <div class="box outset-06"></div>
 </body>
 
 </html>
