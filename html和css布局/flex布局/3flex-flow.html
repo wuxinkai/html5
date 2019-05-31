@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    /*  flex-direction控制排列方向 和  flex-wrap是否换行*/
+        .flex {
+          
+            display: flex; 
+
+            /* 控制排列方向 */
+            flex-direction:row ; /*row:向左  row-reverse:向右 column:向上  column-reverse:向下 */
+            flex-wrap: nowrap; /* 不换行(默认):nowrap  换行:wrap   从底部向上排列:wrap-reverse;*/
+
+            /* 简写  flex-flow属性：flex-direction和flex-wrap的简写，默认row nowrap*/
+            flex-flow: row nowrap;
+        } 
+        .grid{
+          background: #f1f1f1;
+          height: 400px;
+        }
+        #div-left-03 {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        #div-middle-03 {
+            background-color: #5240f7;
+            width:200px;
+            height: 200px;
+        }
+
+        #div-right-03 {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<h3>兼容性 IE10才开始支持 。</h3>
+
+<div class="grid flex" >
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-middle-03" class="box"><span>中</span></div>
+    <div id="div-right-03" class="box"><span>右</span></div>
+    <div id="div-right-03" class="box"><span>右</span></div>
+    <div id="div-right-03" class="box"><span>右</span></div>
+    <div id="div-right-03" class="box"><span>右</span></div>
+</div>
+<!-- <div class="grid flex" >
+    <div id="div-left-03" class="box"><span>div-left</span></div>
+    <div id="div-middle-03" class="box"><span>div-middle</span></div>
+    <div id="div-right-03" class="box"><span>div-right</span></div>
+</div> -->
+</body>
+</html>

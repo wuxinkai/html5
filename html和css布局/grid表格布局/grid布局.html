@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .wrapper {
+            display: grid;
+            grid-template-columns: 200px 100px 100px; /*grid-template-columns用来定义网格列的宽度既轨道宽度，代码表示将容器划分为3列，列的宽度都为100px，宽度可以随意的更改。*/
+            grid-template-rows: 50% 50%;  /* grid-template-rows用来定义网格行的高度，代码表示将容器划分2个行。通过以上两行代码就实现了50%的网格划分了。*/
+            grid-gap: 5px; /*grid-gap用来控制网格的间距的，准确地说是用来控制网格区域的间距。*/
+        }
+        .wrapper div{
+            height: 80px;
+            line-height: 80px;
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+        .wrapper div:nth-child(1){background: red;}
+        .wrapper div:nth-child(2){background: #48ff3b;}
+        .wrapper div:nth-child(3){background: #2d95ff;}
+        .wrapper div:nth-child(4){background: #0c0006;}
+        .wrapper div:nth-child(5){background: red;}
+        .wrapper div:nth-child(6){background: #ebff40;}
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</div>
+</body>
+</html>

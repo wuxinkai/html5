@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<style>
+    /*（3）盒子模型 */
+    /* css盒子模型：内容（content）+边框（border）+间隙（padding）+间隔（margin）。 */
+    /* 
+    标准的盒子模型宽度  =  内容（content）
+  　div 盒子模型=width+（padding+border+margin）*2 =50+(2+1+3)*2=62px;
+    div 的实际容量 ；50px
+    */
+    /* 
+    怪异模式的宽度  =  内容（content+border +padding）
+      div 盒子模型 width + margin *2 =50+ 3*2=56px;
+
+      div 的实际容量  50-(2+1)*2 = 44px
+     */
+</style>
+<body>
+  
+    <div class="box" style="width:50px;height:50px;padding:2px;border:1px solid blue;margin:3px;"></div>
+</body>
+</html>
+<style>
+  /* 
+   content-box   可以使设置的宽度和高度值应用到元素的内容框。盒子的width只包含内容
+   border-box , 设置的width值其实是除margin外的border+padding+element的总宽度。盒子的width包含border+padding+内容
+   inherit , 规定应从父元素继承 box-sizing 属性的值
+   */
+  .box{
+    box-sizing :  content-box
+  }
+
+</style>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    /* align-items。  上中下对其 */
+        .flex {
+          
+            display: flex; 
+            flex-flow: row nowrap;
+
+            align-items: stretch; /*起点对齐flex-start | 终点对齐flex-end | 中间 center | 第一行文字的基线对齐：baseline | 默认值 如果项目未设置高度或设为auto，将占满整个容器的高度stretch*/
+        } 
+        .grid{
+          height: 600px;
+          background: #f1f1f1
+        }
+        #div-left-03 {
+            background-color: red;
+            width: 200px;
+            line-height: 100px;
+            height: 100px;
+        }
+
+        #div-middle-03 {
+            background-color: #5240f7;
+            width:200px;
+            height: 200px;
+        }
+
+        #div-right-03 {
+            background-color: yellow;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<h3>兼容性 IE10才开始支持 。</h3>
+
+<div class="grid flex" >
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-middle-03" class="box"><span>中</span></div>
+    <div id="div-right-03" class="box"><span>右</span></div>
+</div>
+<!-- <div class="grid flex" >
+    <div id="div-left-03" class="box"><span>div-left</span></div>
+    <div id="div-middle-03" class="box"><span>div-middle</span></div>
+    <div id="div-right-03" class="box"><span>div-right</span></div>
+</div> -->
+</body>
+</html>

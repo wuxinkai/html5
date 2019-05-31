@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+    /* align-items。  上中下对其 */
+        .flex {
+          
+            display: flex; 
+            flex-flow: row wrap;
+             /* 如果项目只有一根轴线，该属性不起作用。 */
+            /* 纵向起点对齐flex-start | 纵向终点对齐flex-end | 纵向中间center | 两端对齐space-between | 两侧的间隔都相，均分 space-around | 默认 占满整个轴 stretch; */
+            align-content:stretch;
+        } 
+       
+        .grid{
+          height: 600px;
+          background: #f1f1f1;
+        
+        }
+        #div-left-03 {
+            background-color: red;
+            width: 200px;
+            line-height: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        #div-middle-03 {
+            background-color: #5240f7;
+            width:200px;
+            height: 200px;
+        }
+
+        #div-right-03 {
+            background-color: yellow;
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<h3>兼容性 IE10才开始支持 。</h3>
+
+<div class="grid flex" >
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+    <div id="div-left-03" class="box"><span>左</span></div>
+ 
+</div>
+
+</body>
+</html>
